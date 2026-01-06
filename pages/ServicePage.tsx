@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams, Navigate, Link, useLocation } from 'react-router-dom';
-import { SERVICES, COMPANY_NAME } from '../constants';
+import { SERVICES, COMPANY_NAME, LOCATIONS } from '../constants';
 import { getIcon } from '../utils/icons';
-import { Check, ArrowDownCircle, ArrowRight, BookOpen } from 'lucide-react';
+import { Check, ArrowDownCircle, ArrowRight, BookOpen, MapPin } from 'lucide-react';
 import { updatePageSEO, resetSEO } from '../utils/seo';
 import ServiceSchema from '../components/ServiceSchema';
 import { BLOG_POSTS } from './BlogPage';
@@ -138,8 +138,26 @@ const ServicePage: React.FC = () => {
               </div>
             )}
 
-            {/* Related Content Section for Internal Linking */}
+            {/* Available Locations Section for Internal Linking */}
             <div className="mt-12 pt-12 border-t border-slate-200">
+              <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4">Available In These Locations</h3>
+              <p className="text-slate-600 mb-6">We provide {service.title.toLowerCase()} services throughout South Florida:</p>
+              <div className="flex flex-wrap gap-2 mb-8">
+                {LOCATIONS.slice(0, 6).map((loc) => (
+                  <Link
+                    key={loc.slug}
+                    to={`/location/${loc.slug}`}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-full text-sm font-medium text-slate-700 hover:border-teal-300 hover:text-teal-600 hover:bg-teal-50 transition-colors"
+                  >
+                    <MapPin className="w-4 h-4" />
+                    {loc.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Related Content Section for Internal Linking */}
+            <div className="mt-8 pt-8 border-t border-slate-200">
               <h3 className="text-2xl font-serif font-bold text-slate-900 mb-6">Related Articles & Resources</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {BLOG_POSTS.slice(0, 2).map((post) => (

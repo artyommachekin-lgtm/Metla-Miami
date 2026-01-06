@@ -8,7 +8,8 @@ import {
     Repeat,
     DollarSign,
     Heart,
-    Clock4
+    Clock4,
+    MapPin
 } from 'lucide-react';
 import { COMPANY_NAME } from '../../constants';
 import { updatePageSEO, resetSEO } from '../../utils/seo';
@@ -235,6 +236,22 @@ const StandardCleaningBenefitsPage: React.FC = () => {
                                 View Standard Cleaning Service
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>
+                        </div>
+
+                        {/* Location Links for SEO */}
+                        <div className="bg-slate-50 p-6 rounded-xl my-8 not-prose">
+                            <h3 className="font-bold text-slate-900 mb-4">Standard Cleaning Services Near You</h3>
+                            <div className="flex flex-wrap gap-2">
+                                <Link to="/location/miami" className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700 hover:border-teal-300 hover:text-teal-600 transition-colors">
+                                    <MapPin className="w-3 h-3" /> Miami
+                                </Link>
+                                <Link to="/location/coral-gables" className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700 hover:border-teal-300 hover:text-teal-600 transition-colors">
+                                    <MapPin className="w-3 h-3" /> Coral Gables
+                                </Link>
+                                <Link to="/location/coconut-grove" className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700 hover:border-teal-300 hover:text-teal-600 transition-colors">
+                                    <MapPin className="w-3 h-3" /> Coconut Grove
+                                </Link>
+                            </div>
                         </div>
 
                     </div>

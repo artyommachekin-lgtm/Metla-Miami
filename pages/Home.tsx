@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import StatsPanel from '../components/StatsPanel';
 import { SERVICES, LOCATIONS, TESTIMONIALS, PHONE_NUMBER } from '../constants';
 import { getIcon } from '../utils/icons';
-import { ShieldCheck, UserCheck, Clock, ArrowRight, Check, Star, Phone } from 'lucide-react';
+import { ShieldCheck, UserCheck, Clock, ArrowRight, Check, Star, Phone, BookOpen } from 'lucide-react';
 
 const Home: React.FC = () => {
   const location = useLocation();
@@ -156,6 +156,51 @@ const Home: React.FC = () => {
                 <span className="text-xs text-slate-400 uppercase tracking-wider">{loc.type}</span>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Teaser Section for Internal Linking */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-center text-3xl font-serif font-bold text-slate-900 mb-4">From Our Blog</h2>
+          <p className="text-center text-slate-600 mb-12 max-w-2xl mx-auto">Helpful guides and tips to keep your Miami home spotless.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Link to="/blog/ultimate-deep-cleaning-guide" className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+              <div className="p-6">
+                <span className="inline-block bg-teal-100 text-teal-700 text-xs font-bold px-2 py-1 rounded mb-3">How-To Guide</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-teal-600 transition-colors mb-2">The Ultimate Deep Cleaning Guide</h3>
+                <p className="text-sm text-slate-600 line-clamp-2">Transform your home with our step-by-step professional deep cleaning process.</p>
+                <div className="mt-4 flex items-center text-teal-600 text-sm font-medium">
+                  <BookOpen className="w-4 h-4 mr-1" /> 8 min read
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/move-out-cleaning-checklist" className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+              <div className="p-6">
+                <span className="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded mb-3">Checklists</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-teal-600 transition-colors mb-2">Move-Out Cleaning Checklist</h3>
+                <p className="text-sm text-slate-600 line-clamp-2">Get your security deposit back with our complete room-by-room guide.</p>
+                <div className="mt-4 flex items-center text-teal-600 text-sm font-medium">
+                  <BookOpen className="w-4 h-4 mr-1" /> 6 min read
+                </div>
+              </div>
+            </Link>
+            <Link to="/blog/airbnb-turnover-cleaning-guide" className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
+              <div className="p-6">
+                <span className="inline-block bg-pink-100 text-pink-700 text-xs font-bold px-2 py-1 rounded mb-3">Vacation Rentals</span>
+                <h3 className="font-bold text-slate-900 group-hover:text-teal-600 transition-colors mb-2">Airbnb Cleaning for Superhosts</h3>
+                <p className="text-sm text-slate-600 line-clamp-2">Turnover tips that keep your 5-star reviews coming.</p>
+                <div className="mt-4 flex items-center text-teal-600 text-sm font-medium">
+                  <BookOpen className="w-4 h-4 mr-1" /> 7 min read
+                </div>
+              </div>
+            </Link>
+          </div>
+          <div className="text-center mt-10">
+            <Link to="/blog" className="inline-flex items-center text-teal-600 font-bold hover:text-teal-700 transition-colors">
+              View All Articles <ArrowRight className="w-4 h-4 ml-1" />
+            </Link>
           </div>
         </div>
       </section>

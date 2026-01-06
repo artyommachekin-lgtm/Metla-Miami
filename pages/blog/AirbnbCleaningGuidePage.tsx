@@ -9,7 +9,8 @@ import {
     Users,
     Clock4,
     Shield,
-    Plane
+    Plane,
+    MapPin
 } from 'lucide-react';
 import { COMPANY_NAME } from '../../constants';
 import { updatePageSEO, resetSEO } from '../../utils/seo';
@@ -272,6 +273,22 @@ const AirbnbCleaningGuidePage: React.FC = () => {
                                 View Vacation Rental Cleaning
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </Link>
+                        </div>
+
+                        {/* Location Links for SEO */}
+                        <div className="bg-slate-50 p-6 rounded-xl my-8 not-prose">
+                            <h3 className="font-bold text-slate-900 mb-4">Vacation Rental Cleaning in Your Area</h3>
+                            <div className="flex flex-wrap gap-2">
+                                <Link to="/location/miami-beach" className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700 hover:border-teal-300 hover:text-teal-600 transition-colors">
+                                    <MapPin className="w-3 h-3" /> Miami Beach
+                                </Link>
+                                <Link to="/location/brickell" className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700 hover:border-teal-300 hover:text-teal-600 transition-colors">
+                                    <MapPin className="w-3 h-3" /> Brickell
+                                </Link>
+                                <Link to="/location/sunny-isles-beach" className="inline-flex items-center gap-1 px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-700 hover:border-teal-300 hover:text-teal-600 transition-colors">
+                                    <MapPin className="w-3 h-3" /> Sunny Isles Beach
+                                </Link>
+                            </div>
                         </div>
 
                     </div>
