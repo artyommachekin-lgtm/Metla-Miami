@@ -13,7 +13,7 @@ export const BLOG_POSTS = [
         category: 'Cleaning Guides',
         readTime: '8 min read',
         datePublished: '2024-01-15',
-        image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=800&fm=webp',
         icon: Sparkles
     },
     {
@@ -23,7 +23,7 @@ export const BLOG_POSTS = [
         category: 'Checklists',
         readTime: '6 min read',
         datePublished: '2024-01-10',
-        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&fm=webp',
         icon: Building2
     },
     {
@@ -33,7 +33,7 @@ export const BLOG_POSTS = [
         category: 'Cleaning Tips',
         readTime: '5 min read',
         datePublished: '2024-01-20',
-        image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&fm=webp',
         icon: Home
     },
     {
@@ -43,7 +43,7 @@ export const BLOG_POSTS = [
         category: 'Vacation Rentals',
         readTime: '7 min read',
         datePublished: '2024-01-18',
-        image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&fm=webp',
         icon: Plane
     },
     {
@@ -53,7 +53,7 @@ export const BLOG_POSTS = [
         category: 'Specialty Cleaning',
         readTime: '7 min read',
         datePublished: '2024-01-12',
-        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&fm=webp',
         icon: Hammer
     }
 ];

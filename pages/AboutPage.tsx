@@ -26,7 +26,7 @@ const AboutPage: React.FC = () => {
                 <div className="absolute inset-0 bg-teal-900/20" />
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2940&auto=format&fit=crop"
+                        src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2940&fm=webp&auto=format&fit=crop"
                         alt="Luxury Interior"
                         className="w-full h-full object-cover opacity-20"
                         loading="lazy"
