@@ -43,8 +43,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3 text-slate-900' : 'bg-transparent py-6 text-white'
-        }`}
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3 text-slate-900' : 'bg-transparent py-6 text-white'}`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-serif font-bold tracking-tighter">
@@ -89,8 +88,8 @@ const Navigation: React.FC = () => {
             <Link
               to="/booking"
               className={`px-5 py-2 rounded-sm font-bold text-sm transition-all shadow-lg ${isScrolled
-                  ? 'bg-slate-900 text-white hover:bg-slate-800'
-                  : 'bg-white text-slate-900 hover:bg-slate-100'
+                ? 'bg-slate-900 text-white hover:bg-slate-800'
+                : 'bg-white text-slate-900 hover:bg-slate-100'
                 }`}
             >
               Book Now
