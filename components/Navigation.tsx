@@ -41,10 +41,31 @@ const Navigation: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
+  // Check if we're on the homepage (hero has dark background)
+  const isHomePage = location.pathname === '/';
+
+  // Determine nav styling based on page and scroll state
+  const getNavClasses = () => {
+    if (isScrolled) {
+      return 'bg-white shadow-md py-3 text-slate-900';
+    }
+    // On homepage, use transparent with white text
+    if (isHomePage) {
+      return 'bg-transparent py-6 text-white';
+    }
+    // On other pages, use white background from the start
+    return 'bg-white shadow-sm py-3 text-slate-900';
+  };
+
+  const getButtonClasses = () => {
+    if (isScrolled || !isHomePage) {
+      return 'bg-slate-900 text-white hover:bg-slate-800';
+    }
+    return 'bg-white text-slate-900 hover:bg-slate-100';
+  };
+
   return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3 text-slate-900' : 'bg-transparent py-6 text-white'}`}
-    >
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${getNavClasses()}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-serif font-bold tracking-tighter">
           METLA<span className="text-teal-500">.</span>
@@ -87,10 +108,7 @@ const Navigation: React.FC = () => {
             </a>
             <Link
               to="/booking"
-              className={`px-5 py-2 rounded-sm font-bold text-sm transition-all shadow-lg ${isScrolled
-                ? 'bg-slate-900 text-white hover:bg-slate-800'
-                : 'bg-white text-slate-900 hover:bg-slate-100'
-                }`}
+              className={`px-5 py-2 rounded-sm font-bold text-sm transition-all shadow-lg ${getButtonClasses()}`}
             >
               Book Now
             </Link>
