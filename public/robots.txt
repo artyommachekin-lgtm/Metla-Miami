@@ -1,0 +1,15 @@
+# Metla House Cleaning - Robots.txt
+# https://metlahousecleaning.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://metlahousecleaning.com/sitemap.xml
+
+# Crawl-delay (optional, helps server load)
+Crawl-delay: 1
+
+# Block common non-public directories
+Disallow: /api/
+Disallow: /.env
