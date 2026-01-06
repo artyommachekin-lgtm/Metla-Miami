@@ -8,7 +8,7 @@ import {
     Sparkles,
     Droplets,
     Wind,
-    Spray
+    SprayCan
 } from 'lucide-react';
 import { COMPANY_NAME, PHONE_NUMBER } from '../../constants';
 import { updatePageSEO, resetSEO } from '../../utils/seo';
@@ -217,7 +217,7 @@ const DeepCleaningGuidePage: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 p-4 bg-teal-50 rounded-lg">
-                                <Spray className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
+                                <SprayCan className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                                 <div>
                                     <h4 className="font-bold text-slate-900">Salt Air Solutions</h4>
                                     <p className="text-slate-600 text-sm">Pay extra attention to balcony doors, window tracks, and outdoor furniture. Use rust-preventive treatments on metal fixtures.</p>
