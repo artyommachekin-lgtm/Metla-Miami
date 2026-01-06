@@ -60,7 +60,7 @@ const Breadcrumbs: React.FC = () => {
     }
 
     return (
-        <nav aria-label="Breadcrumb" className="bg-slate-100 py-3">
+        <nav aria-label="Breadcrumb" className="bg-slate-100 py-3 mt-20">
             <div className="container mx-auto px-4">
                 <ol
                     className="flex items-center flex-wrap text-sm"
