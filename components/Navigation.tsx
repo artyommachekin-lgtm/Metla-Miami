@@ -48,7 +48,7 @@ const Navigation: React.FC = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-serif font-bold tracking-tighter">
-          METLA<span className={`text-teal-500`}>.</span>
+          METLA<span className="text-teal-500">.</span>
         </Link>
 
         {/* Desktop Menu */}
