@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Navigate, Link, useLocation } from 'react-router-dom';
 import { SERVICES, COMPANY_NAME } from '../constants';
+import { getIcon } from '../utils/icons';
 import { Check, ArrowDownCircle, ArrowRight, BookOpen } from 'lucide-react';
 import { updatePageSEO, resetSEO } from '../utils/seo';
 import ServiceSchema from '../components/ServiceSchema';
@@ -33,7 +34,7 @@ const ServicePage: React.FC = () => {
       <ServiceSchema service={service} />
       <div className="bg-slate-900 text-white pt-32 pb-20">
         <div className="container mx-auto px-4 text-center">
-          <service.icon className="w-16 h-16 text-teal-400 mx-auto mb-6" />
+          {React.createElement(getIcon(service.iconName), { className: "w-16 h-16 text-teal-400 mx-auto mb-6" })}
           <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">{service.title}</h1>
           <p className="text-xl text-slate-300 max-w-2xl mx-auto">{service.shortDescription}</p>
         </div>
@@ -64,8 +65,8 @@ const ServicePage: React.FC = () => {
                 {service.focusPoints.map((point, idx) => (
                   <div key={idx} className="flex items-start p-6 bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow group">
                     <div className="mt-1 mr-4 p-3 bg-teal-50 rounded-lg group-hover:bg-teal-500 transition-colors">
-                      {point.icon ? (
-                        <point.icon className="w-6 h-6 text-teal-600 group-hover:text-white transition-colors" />
+                      {point.iconName ? (
+                        React.createElement(getIcon(point.iconName), { className: "w-6 h-6 text-teal-600 group-hover:text-white transition-colors" })
                       ) : (
                         <div className="w-2 h-2 bg-teal-500 rounded-full mt-2" />
                       )}

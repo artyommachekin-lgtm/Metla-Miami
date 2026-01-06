@@ -1,18 +1,16 @@
-import { LucideIcon } from 'lucide-react';
-
 export interface Service {
   id: string;
   title: string;
   shortDescription: string;
   fullDescription: string;
-  icon: LucideIcon;
+  iconName: string;  // Changed from icon: LucideIcon to string
   benefits: string[];
   slug: string;
   checklist?: Record<string, string[]>;
   focusPoints?: {
     title: string;
     description: string;
-    icon?: LucideIcon;
+    iconName?: string;  // Changed from icon to iconName
   }[];
   suitability?: {
     title?: string;

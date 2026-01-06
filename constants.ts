@@ -1,4 +1,3 @@
-import { Sparkles, Home, Hammer, Key, Move, ShieldCheck, Clock, Star, MapPin, Layers, Feather, Armchair, Brush, Fan, Gem, PanelTop, ClipboardCheck, Eraser, Bed, Camera } from 'lucide-react';
 import { Service, Location, Testimonial } from './types';
 
 export const COMPANY_NAME = "Metla House Cleaning";
@@ -34,22 +33,22 @@ We focus on maintaining the baseline of cleanliness and order:`,
       {
         title: "Surface Management",
         description: "Routine dusting of furniture, fixtures, and décor to maintain clarity and prevent buildup.",
-        icon: Feather
+        iconName: 'Feather'
       },
       {
         title: "Key Area Sanitization",
         description: "Thorough cleaning and disinfection of bathrooms and kitchen countertops.",
-        icon: ShieldCheck
+        iconName: 'ShieldCheck'
       },
       {
         title: "Visual Reset",
         description: "Light straightening of cushions, chairs, and throw blankets for a composed, orderly look.",
-        icon: Armchair
+        iconName: 'Armchair'
       },
       {
         title: "Floor Care",
         description: "Vacuuming and mopping to ensure high-traffic areas remain spotless.",
-        icon: Sparkles
+        iconName: 'Sparkles'
       }
     ],
     suitability: {
@@ -63,7 +62,7 @@ We focus on maintaining the baseline of cleanliness and order:`,
       ],
       footer: "Still unsure if we cover a specific area? Go through the comprehensive checklist below to see exactly what we touch!"
     },
-    icon: Sparkles,
+    iconName: 'Sparkles',
     benefits: ["Weekly / Bi-Weekly Schedule", "Surface Disinfection", "Linens & Beds Made"],
     checklist: {
       "Bedrooms": [
@@ -137,22 +136,22 @@ We target the "invisible" layer of dirt—the grime that accumulates on baseboar
       {
         title: "Intensive Scrubbing",
         description: "Heavy-duty removal of tough soap scum, mineral deposits in bathrooms, and grease buildup in the kitchen.",
-        icon: Brush
+        iconName: 'Brush'
       },
       {
         title: "Vertical Detailing",
         description: "We hand-wipe baseboards, door frames, window sills, and cabinet fronts to remove months of accumulated dust.",
-        icon: PanelTop
+        iconName: 'PanelTop'
       },
       {
         title: "High-Low Reach",
         description: "Addressing neglected areas often missed, from ceiling fan blades and AC vents down to floor corners.",
-        icon: Fan
+        iconName: 'Fan'
       },
       {
         title: "Fixture Restoration",
         description: "Deep polishing of chrome, stainless steel, and glass fixtures to remove stubborn water spots and restore shine.",
-        icon: Gem
+        iconName: 'Gem'
       }
     ],
     suitability: {
@@ -166,7 +165,7 @@ We target the "invisible" layer of dirt—the grime that accumulates on baseboar
       ],
       footer: "Still unsure if you need a Deep or Standard clean? Check the comprehensive checklist below to see the specific inclusions for this heavy-duty service."
     },
-    icon: ShieldCheck,
+    iconName: 'ShieldCheck',
     benefits: ["Baseboards & Door Frames", "Microwave Inside & Out", "Fans, Blinds & Light Fixtures"],
     checklist: {
       "Bedrooms": [
@@ -274,22 +273,22 @@ Our Post-Construction service is a specialized detail designed to safely extract
       {
         title: "Fine Dust Extraction",
         description: "We meticulously remove the microscopic layer of drywall dust that settles on walls, baseboards, and ledges.",
-        icon: Fan
+        iconName: 'Fan'
       },
       {
         title: "Label & Residue Removal",
         description: "Gentle removal of manufacturer stickers, protective tape, and adhesive residue from new windows and appliances.",
-        icon: Eraser
+        iconName: 'Eraser'
       },
       {
         title: "Sawdust Removal",
         description: "Deep vacuuming of new cabinetry, drawers, and closets to remove trapped wood shavings and debris.",
-        icon: Layers
+        iconName: 'Layers'
       },
       {
         title: "Surface Safety",
         description: "We prioritize the protection of your new investment, using versatile, non-abrasive methods to lift dust and debris without scratching or dulling your finishes.",
-        icon: ShieldCheck
+        iconName: 'ShieldCheck'
       }
     ],
     suitability: {
@@ -303,7 +302,7 @@ Our Post-Construction service is a specialized detail designed to safely extract
       ],
       footer: "Still unsure if we cover a specific area? Go through the comprehensive checklist below to see exactly what we touch!"
     },
-    icon: Hammer,
+    iconName: 'Hammer',
     benefits: ["Fine Dust Removal", "Inside Cabinets & Drawers", "Interior Windows & Sills"],
     checklist: {
       "Bedrooms": [
@@ -395,22 +394,22 @@ We act as your eyes and ears on the ground. Beyond sanitizing the space, we stag
       {
         title: "Rapid Turnover",
         description: "Efficient, focused workflows designed to get your unit perfectly prepped and ready within standard check-out/check-in windows.",
-        icon: Clock
+        iconName: 'Clock'
       },
       {
         title: "Hotel-Style Staging",
         description: "We arrange linens, fold towels, and organize amenities to create a professional, welcoming first impression for guests.",
-        icon: Bed
+        iconName: 'Bed'
       },
       {
         title: "Damage Reporting",
         description: "If we spot damage, stains, or missing items from a previous guest, we notify you immediately so you can manage claims.",
-        icon: Camera
+        iconName: 'Camera'
       },
       {
         title: "Sanitization Focus",
         description: "Priority disinfection of high-touch points to ensure guest safety and peace of mind.",
-        icon: Sparkles
+        iconName: 'Sparkles'
       }
     ],
     suitability: {
@@ -424,7 +423,7 @@ We act as your eyes and ears on the ground. Beyond sanitizing the space, we stag
       ],
       footer: "Need to know if we handle laundry or specific restocking? Check the comprehensive checklist below for our turnover specifications."
     },
-    icon: Key,
+    iconName: 'Key',
     benefits: ["Linen Turnover & Staging", "Visual Verification Photos", "Damage Reporting"],
     checklist: {
       "Bedrooms": [
@@ -490,22 +489,22 @@ Unlike furnished home cleanings, this service reaches the areas usually blocked 
       {
         title: "Cabinetry Interiors",
         description: "We vacuum and hand-wipe the interior and exterior of all kitchen and bathroom cabinets, drawers, and shelving.",
-        icon: Layers
+        iconName: 'Layers'
       },
       {
         title: "Appliance Detailing",
         description: "Deep cleaning of the interiors of the refrigerator, oven, and microwave to remove food residue and odors.",
-        icon: Sparkles
+        iconName: 'Sparkles'
       },
       {
         title: "Full Sanitization",
         description: "A complete disinfection of all surfaces, switches, and handles to ensure a hygienic environment for the new resident.",
-        icon: ShieldCheck
+        iconName: 'ShieldCheck'
       },
       {
         title: "Inspection Ready",
         description: "We adhere to professional real estate checklists to ensure the home meets the rigorous cleanliness standards required for turnover.",
-        icon: ClipboardCheck
+        iconName: 'ClipboardCheck'
       }
     ],
     suitability: {
@@ -519,7 +518,7 @@ Unlike furnished home cleanings, this service reaches the areas usually blocked 
       ],
       footer: "Still unsure if we cover a specific area? Go through the comprehensive checklist below to see exactly what we touch!"
     },
-    icon: Move,
+    iconName: 'Move',
     benefits: ["Inside Fridge & Oven", "Inside Cabinets & Drawers", "Interior Windows & Sills"],
     checklist: {
       "Bedrooms": [

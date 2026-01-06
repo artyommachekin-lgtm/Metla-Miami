@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import Hero from '../components/Hero';
 import StatsPanel from '../components/StatsPanel';
 import { SERVICES, LOCATIONS, TESTIMONIALS, PHONE_NUMBER } from '../constants';
+import { getIcon } from '../utils/icons';
 import { ShieldCheck, UserCheck, Clock, ArrowRight, Check, Star, Phone } from 'lucide-react';
 
 const Home: React.FC = () => {
@@ -79,7 +80,7 @@ const Home: React.FC = () => {
               <div key={service.id} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 group flex flex-col">
                 <div className="flex items-start justify-between mb-6">
                   <div className="p-3 bg-teal-50 rounded-lg group-hover:bg-teal-500 transition-colors">
-                    <service.icon className="w-8 h-8 text-teal-600 group-hover:text-white" />
+                    {React.createElement(getIcon(service.iconName), { className: "w-8 h-8 text-teal-600 group-hover:text-white" })}
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">{service.title}</h3>
