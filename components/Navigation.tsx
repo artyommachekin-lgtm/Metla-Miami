@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { PHONE_NUMBER } from '../constants';
+import { preloadJobberAssets } from './JobberEmbed';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -108,6 +109,8 @@ const Navigation: React.FC = () => {
             </a>
             <Link
               to="/booking"
+              onMouseEnter={preloadJobberAssets}
+              onTouchStart={preloadJobberAssets}
               className={`px-5 py-2 rounded-sm font-bold text-sm transition-all shadow-lg ${getButtonClasses()}`}
             >
               Book Now
