@@ -55,6 +55,14 @@
     href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQZNLo_U2r.woff2"
     as="font" type="font/woff2" crossorigin />
 
+  <!-- Preload LCP Hero Image for Mobile Performance -->
+  <link rel="preload"
+    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&fm=webp&auto=format&fit=crop"
+    as="image" type="image/webp" />
+  <link rel="preload"
+    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2574&fm=webp&auto=format&fit=crop"
+    as="image" type="image/webp" media="(min-width: 768px)" />
+
   <!-- Critical CSS for Above-the-Fold Content -->
   <style>
     /* Critical CSS - Inline for fastest render */

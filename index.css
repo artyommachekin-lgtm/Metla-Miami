@@ -19,6 +19,95 @@ body {
   flex-direction: column;
 }
 
+/* ========================================
+   MOBILE CORE WEB VITALS OPTIMIZATIONS
+   ======================================== */
+
+/* CLS Prevention: Reserve space for images and embeds */
+img {
+  max-width: 100%;
+  height: auto;
+  /* Prevent layout shift during image load */
+  background-color: #f1f5f9;
+}
+
+/* Ensure aspect ratios are preserved to prevent CLS */
+img[width][height] {
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* INP/FID Optimization: Improve touch responsiveness */
+button,
+a,
+[role="button"],
+input,
+select,
+textarea {
+  /* Enable passive touch handling */
+  touch-action: manipulation;
+}
+
+/* Minimum touch target size (48x48px for mobile accessibility) */
+@media (max-width: 768px) {
+
+  button,
+  a.inline-flex,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Optimize font rendering for mobile */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+  }
+
+  /* Reduce motion for users who prefer it (better INP) */
+  @media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* LCP Optimization: Hero section placeholder to prevent CLS */
+.hero-image-container {
+  position: relative;
+  overflow: hidden;
+  /* Reserve space with aspect ratio */
+  aspect-ratio: 16 / 9;
+}
+
+/* Optimize will-change for animations (better INP) */
+.transition-all,
+.transition-colors,
+.transition-transform {
+  will-change: auto;
+}
+
+/* Only apply will-change when hovering (saves memory on mobile) */
+@media (hover: hover) {
+
+  .transition-all:hover,
+  .transition-colors:hover,
+  .transition-transform:hover {
+    will-change: transform, opacity;
+  }
+}
+
+/* ========================================
+   EXISTING STYLES
+   ======================================== */
+
 /* Custom scrollbar for webkit browsers */
 ::-webkit-scrollbar {
   width: 8px;
@@ -48,9 +137,22 @@ body {
   outline: none;
 }
 
-/* Jobber embed container styles */
+/* Jobber embed container styles - prevent CLS */
+.jobber-embed-container {
+  min-height: 600px;
+  contain: layout style;
+}
+
 .jobber-embed-container iframe {
   width: 100%;
   min-height: 500px;
   border: none;
+}
+
+/* Content-visibility for below-fold sections (LCP optimization) */
+@media (max-width: 768px) {
+  section:not(:first-child) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
+  }
 }

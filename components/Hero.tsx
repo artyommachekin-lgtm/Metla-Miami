@@ -25,10 +25,18 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2574&fm=webp&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&fm=webp&auto=format&fit=crop"
+          srcSet="
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=640&fm=webp&auto=format&fit=crop 640w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&fm=webp&auto=format&fit=crop 1200w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2574&fm=webp&auto=format&fit=crop 2574w
+          "
+          sizes="100vw"
           alt="Pristine Living Room"
           className="w-full h-full object-cover opacity-40"
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
           width={2574}
           height={1716}
         />
