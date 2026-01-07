@@ -6,10 +6,10 @@ const StatsPanel: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative z-20 -mt-16 mx-4 md:mx-auto max-w-6xl">
+    <div className="relative z-20 -mt-16 mx-4 md:mx-auto max-w-6xl" style={{ minHeight: '120px' }}>
       <div className="bg-slate-900/80 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl overflow-hidden text-white">
         <div className="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/20">
-          
+
           {/* Stat 1 */}
           <div className="p-6 flex flex-col items-center md:items-start group hover:bg-white/5 transition-colors duration-300">
             <div className="flex items-center space-x-3 mb-2">
@@ -47,16 +47,16 @@ const StatsPanel: React.FC = () => {
           </div>
 
           {/* Stat 4 - CTA style */}
-          <div 
+          <div
             onClick={() => navigate('/policies#satisfaction-guarantee')}
             className="p-6 flex flex-col items-center justify-center bg-teal-600/90 hover:bg-teal-600 transition-colors cursor-pointer text-center md:text-left"
           >
-             <div className="flex items-center space-x-2 mb-1">
-                <Award className="w-6 h-6 text-white" />
-                <span className="text-2xl font-serif">100%</span>
-             </div>
-             <p className="text-sm uppercase tracking-widest font-bold">Metla Guarantee</p>
-             <p className="text-xs text-teal-100 mt-1">We reclean for free if unsatisfied.</p>
+            <div className="flex items-center space-x-2 mb-1">
+              <Award className="w-6 h-6 text-white" />
+              <span className="text-2xl font-serif">100%</span>
+            </div>
+            <p className="text-sm uppercase tracking-widest font-bold">Metla Guarantee</p>
+            <p className="text-xs text-teal-100 mt-1">We reclean for free if unsatisfied.</p>
           </div>
 
         </div>

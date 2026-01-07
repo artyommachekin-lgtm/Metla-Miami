@@ -586,41 +586,34 @@
 
   <div id="root"></div>
 
-  <!-- Tailwind CSS - Async to not block FCP -->
-  <script async src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS - Sync to prevent CLS from unstyled content flash -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    // Wait for Tailwind to load before configuring
-    (function waitForTailwind() {
-      if (typeof tailwind !== 'undefined') {
-        tailwind.config = {
-          theme: {
-            extend: {
-              fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                serif: ['Playfair Display', 'serif'],
-              },
-              colors: {
-                teal: {
-                  50: '#f0fdfa',
-                  100: '#ccfbf1',
-                  200: '#99f6e4',
-                  300: '#5eead4',
-                  400: '#2dd4bf',
-                  500: '#14b8a6',
-                  600: '#0d9488',
-                  700: '#0f766e',
-                  800: '#115e59',
-                  900: '#134e4a',
-                  950: '#042f2e',
-                },
-              }
-            },
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
           },
-        };
-      } else {
-        setTimeout(waitForTailwind, 10);
-      }
-    })();
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e',
+            },
+          }
+        },
+      },
+    };
     // Remove placeholder once React renders
     document.getElementById('root').addEventListener('DOMNodeInserted', function () {
       var placeholder = document.getElementById('hero-placeholder');
