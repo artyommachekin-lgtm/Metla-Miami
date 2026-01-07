@@ -361,7 +361,7 @@ const MoveOutChecklistPage: React.FC = () => {
                             <DoorOpen className="w-12 h-12 mx-auto mb-4 opacity-80" />
                             <h3 className="text-2xl font-bold mb-3">Let Us Handle Your Move-Out Cleaning</h3>
                             <p className="text-teal-100 mb-6">
-                                Too busy packing? Our professional move-out cleaning service ensures you get your deposit back without the stress.
+                                Too busy packing? Our professional move-out cleaning service helps you leave your rental spotless and stress-free.
                             </p>
                             <Link
                                 to="/service/move-in-out-cleaning"

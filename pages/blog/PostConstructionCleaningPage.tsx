@@ -39,7 +39,7 @@ const PostConstructionCleaningPage: React.FC = () => {
         },
         {
             question: "Can I do post-construction cleaning myself?",
-            answer: "While possible, we don't recommend it. Construction dust contains fine particles that require HEPA equipment to remove properly. Without proper techniques, you'll spread dust rather than eliminate it, and may damage new finishes."
+            answer: "While possible, we don't recommend it. Construction dust contains fine particles that require professional equipment to remove properly. Without proper techniques, you'll spread dust rather than eliminate it, and may damage new finishes."
         }
     ];
 
@@ -54,7 +54,7 @@ const PostConstructionCleaningPage: React.FC = () => {
         },
         {
             name: "Top-Down Dusting",
-            text: "Start with ceilings, light fixtures, and ceiling fans. Work down walls, window frames, and fixtures. Use HEPA vacuums to capture fine dust particles."
+            text: "Start with ceilings, light fixtures, and ceiling fans. Work down walls, window frames, and fixtures. Use professional vacuuming techniques to capture fine dust particles."
         },
         {
             name: "Clean Windows and Glass",
@@ -121,7 +121,7 @@ const PostConstructionCleaningPage: React.FC = () => {
                 description="Professional process for cleaning homes after construction, renovation, or remodeling work."
                 totalTime="PT10H"
                 supply={[
-                    "HEPA vacuum",
+                    "Professional vacuum",
                     "Microfiber cloths",
                     "All-purpose cleaner",
                     "Glass cleaner",
@@ -131,7 +131,7 @@ const PostConstructionCleaningPage: React.FC = () => {
                     "Dust masks"
                 ]}
                 tool={[
-                    "HEPA vacuum with attachments",
+                    "Professional vacuum with attachments",
                     "Extension poles for high areas",
                     "Ladders",
                     "Scraper for residue",
@@ -232,8 +232,8 @@ const PostConstructionCleaningPage: React.FC = () => {
                             <div className="flex items-start gap-3 p-4 bg-teal-50 rounded-lg">
                                 <Wind className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                                 <div>
-                                    <h4 className="font-bold text-slate-900">HEPA Filtration</h4>
-                                    <p className="text-slate-600 text-sm">Professional-grade HEPA vacuums capture fine dust particles that standard vacuums recirculate into the air.</p>
+                                    <h4 className="font-bold text-slate-900">Professional Equipment</h4>
+                                    <p className="text-slate-600 text-sm">Professional-grade vacuums and cleaning tools capture fine dust particles that standard vacuums recirculate into the air.</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 p-4 bg-teal-50 rounded-lg">
@@ -296,7 +296,7 @@ const PostConstructionCleaningPage: React.FC = () => {
                             <Hammer className="w-12 h-12 mx-auto mb-4 opacity-80" />
                             <h3 className="text-2xl font-bold mb-3">Just Finished Renovating?</h3>
                             <p className="text-orange-100 mb-6">
-                                Let our post-construction specialists handle the cleanup. HEPA equipment, trained crews, and guaranteed results.
+                                Let our post-construction specialists handle the cleanup. Professional equipment, trained crews, and quality results.
                             </p>
                             <Link
                                 to="/service/post-construction-cleaning-miami"

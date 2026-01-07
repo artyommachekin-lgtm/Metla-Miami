@@ -481,7 +481,7 @@ We act as your eyes and ears on the ground. Beyond sanitizing the space, we stag
     id: 'move-in-out',
     title: "Move-In / Move-Out Cleaning",
     slug: "move-in-out-cleaning",
-    shortDescription: "A comprehensive reset for empty homes. Designed to meet strict property management standards or guarantee a pristine fresh start for your new residence.",
+    shortDescription: "A comprehensive reset for empty homes. Designed to meet strict property management standards and help you achieve a pristine fresh start for your new residence.",
     fullDescription: `Our Move-In / Move-Out service is our most exhaustive package, engineered exclusively for empty properties. Whether you are handing the keys back to a landlord or preparing a newly purchased home for your family, this service leaves zero trace of the previous occupants.
 
 Unlike furnished home cleanings, this service reaches the areas usually blocked by furniture. We focus on "interior" detailing—cleaning inside every cabinet, drawer, and appliance—ensuring the property is truly turnkey ready.`,
@@ -611,7 +611,7 @@ export const LOCATIONS: Location[] = [
 
 Miami isn't one neighborhood—it's a tapestry of distinct communities, each with unique housing styles and cleaning challenges. From the sleek high-rises of Downtown and Edgewater to the family homes of Kendall and Pinecrest, from the artistic lofts of Wynwood to the waterfront estates of Key Biscayne, we've cleaned them all. We understand that a 1950s Coral Gables estate needs different care than a brand-new Brickell condo.
 
-Our Miami-based team knows this city intimately. We understand the humidity that breeds mold in closets and bathrooms. We know how construction dust from Miami's constant growth infiltrates even well-sealed homes. We're familiar with the salt air that drifts blocks inland. And we appreciate that Miami residents—whether busy professionals, active retirees, or growing families—expect their homes to be clean, healthy, and ready for whatever the Magic City throws at them.
+Our Miami-based team knows this city intimately. We understand the humidity that causes buildup in closets and bathrooms. We know how construction dust from Miami's constant growth infiltrates even well-sealed homes. We're familiar with the salt air that drifts blocks inland. And we appreciate that Miami residents—whether busy professionals, active retirees, or growing families—expect their homes to be clean, healthy, and ready for whatever the Magic City throws at them.
 
 Whether you need recurring maintenance to keep pace with Miami's rapid lifestyle, a deep clean to reset your home, or specialized service for a vacation rental, Metla delivers consistent five-star results. We're the trusted choice for Miami homeowners who refuse to settle for "good enough."`,
     keywords: ["House cleaning Miami", "Maid service Miami", "Cleaning services Miami FL", "Miami house cleaners"],
@@ -648,11 +648,11 @@ Whether you need recurring maintenance to keep pace with Miami's rapid lifestyle
     cleaningChallenges: [
       {
         title: "Tropical Humidity",
-        description: "Miami's year-round humidity creates perfect conditions for mold and mildew. We target vulnerable areas and use anti-microbial products to prevent growth."
+        description: "Miami's year-round humidity creates ideal conditions for dust and buildup. We pay special attention to moisture-prone areas like bathrooms, closets, and window seals."
       },
       {
         title: "Urban Construction Dust",
-        description: "Miami's skyline is constantly changing, and construction dust travels far. Our HEPA equipment captures fine particles that settle on surfaces and affect air quality."
+        description: "Miami's skyline is constantly changing, and construction dust travels far. Our thorough cleaning methods capture fine particles that settle on surfaces throughout your home."
       },
       {
         title: "Salt Air Intrusion",
@@ -675,7 +675,7 @@ Whether you need recurring maintenance to keep pace with Miami's rapid lifestyle
 
 As former property managers who serviced luxury vacation rentals in this very neighborhood, we understand what it takes to keep a Brickell residence at five-star standards. We know the concierge at your building. We understand the freight elevator schedules. We're familiar with the specific requirements of major condo associations from Icon Brickell to Brickell Heights.
 
-Our specialized high-rise cleaning addresses the unique challenges of vertical living. Floor-to-ceiling windows require streak-free techniques that account for sun exposure and salt air drift from the bay. Urban dust from nearby construction settles faster in Brickell than anywhere else in Miami—requiring HEPA filtration and detailed surface cleaning. And with most Brickell residents working demanding professional schedules, we offer flexible timing that fits your lifestyle.
+Our specialized high-rise cleaning addresses the unique challenges of vertical living. Floor-to-ceiling windows require streak-free techniques that account for sun exposure and salt air drift from the bay. Urban dust from nearby construction settles faster in Brickell than anywhere else in Miami—requiring detailed surface cleaning. And with most Brickell residents working demanding professional schedules, we offer flexible timing that fits your lifestyle.
 
 Whether you're a finance professional at one of the Brickell Avenue towers, a remote worker enjoying your home office with a view, or an investor maintaining a rental property, Metla delivers the reliability, discretion, and quality that Brickell demands. We don't just clean condos—we maintain the lifestyle you've worked hard to achieve.`,
     keywords: ["Maid service Brickell", "Condo cleaning Brickell", "House cleaning Brickell Miami"],
@@ -712,7 +712,7 @@ Whether you're a finance professional at one of the Brickell Avenue towers, a re
       },
       {
         title: "Urban Construction Dust",
-        description: "Brickell's constant development means fine construction dust infiltrates even sealed condos. Our HEPA-filtered equipment captures particles that standard vacuums miss."
+        description: "Brickell's constant development means fine construction dust infiltrates even sealed condos. Our thorough cleaning techniques capture particles that standard cleaning methods miss."
       },
       {
         title: "High-Rise Logistics",
@@ -720,7 +720,7 @@ Whether you're a finance professional at one of the Brickell Avenue towers, a re
       },
       {
         title: "Humidity Control Indoors",
-        description: "AC systems work overtime in Brickell. We address mold-prone areas like bathroom fans, closets, and window seals that humidity affects most."
+        description: "AC systems work overtime in Brickell. We pay attention to humidity-prone areas like bathroom fans, closets, and window seals that moisture affects most."
       }
     ],
     propertyManagerContent: "Managing Airbnbs or rental units in Brickell? We've turned over hundreds of vacation rentals in this neighborhood. We know Icon's security protocols, Echo's check-in procedures, and what guests expect from a Brickell stay. Quick turnovers, consistent 5-star cleanliness, and reliable scheduling—even during Art Basel and F1 weekend rushes."
@@ -733,7 +733,7 @@ Whether you're a finance professional at one of the Brickell Avenue towers, a re
     tagline: "Preserving the bohemian spirit of the Grove—where historic charm meets tropical luxury.",
     detailedContent: `Discover a higher standard of cleanliness in Coconut Grove with Metla House Cleaning, where we treat your historic estate or modern bungalow with the reverence it deserves. The Grove isn't just a neighborhood—it's a lifestyle. Nestled among ancient banyan trees, steps from Vizcaya Museum & Gardens and the vibrant energy of CocoWalk, this is Miami's most unique community.
 
-Grove homes present challenges you won't find anywhere else in Miami. Those magnificent banyans drop leaves, aerial roots, and debris year-round. The lush tropical landscaping that makes the Grove beautiful also tracks organic matter into your home. And the proximity to Biscayne Bay means humidity levels that can foster mold in even well-maintained homes.
+Grove homes present challenges you won't find anywhere else in Miami. Those magnificent banyans drop leaves, aerial roots, and debris year-round. The lush tropical landscaping that makes the Grove beautiful also tracks organic matter into your home. And the proximity to Biscayne Bay means humidity levels that can cause buildup in even well-maintained homes.
 
 We founded Metla because we saw too many historic Grove properties treated like tract homes by generic cleaning services. Your 1920s Mediterranean revival with original Cuban tile floors needs different care than a new-build condo. Your waterfront estate near Dinner Key Marina requires attention to salt air exposure. Your mid-century modern with walls of glass demands streak-free technique.
 
@@ -776,7 +776,7 @@ Whether you're in a bayfront mansion in South Grove, a family home near Ransom E
       },
       {
         title: "Bayfront Humidity & Salt",
-        description: "Proximity to Biscayne Bay means higher humidity and salt exposure. We target mold-prone areas and protect surfaces from salt damage."
+        description: "Proximity to Biscayne Bay means higher humidity and salt exposure. We pay attention to moisture-prone areas and protect surfaces from salt damage."
       },
       {
         title: "Eco-Friendly Requirements",
@@ -793,7 +793,7 @@ Whether you're in a bayfront mansion in South Grove, a family home near Ransom E
     tagline: "From South Beach to North Beach—keeping Miami Beach vacation rentals and residences guest-ready year-round.",
     detailedContent: `Metla House Cleaning brings unmatched expertise to Miami Beach, combining our background in luxury vacation rental management with the specific needs of this iconic coastal community. Living in Miami Beach means embracing the beach lifestyle—morning swims at Lummus Park, sunset cocktails on Ocean Drive, and evenings strolling the Art Deco Historic District. It also means battling constant sand, salt air, and humidity that challenge even the most diligent homeowner.
 
-We founded Metla after years of frustration with "good enough" cleaning services that didn't understand the unique demands of Miami Beach properties. Sand tracks in from the beach no matter how careful you are. Salt air corrodes fixtures and leaves residue on windows. Humidity creates mold conditions in closets and bathrooms. And vacation rental guests expect hotel-level cleanliness—every single time.
+We founded Metla after years of frustration with "good enough" cleaning services that didn't understand the unique demands of Miami Beach properties. Sand tracks in from the beach no matter how careful you are. Salt air corrodes fixtures and leaves residue on windows. Humidity creates conditions in closets and bathrooms that need extra attention. And vacation rental guests expect hotel-level cleanliness—every single time.
 
 Our team has serviced over 70 vacation rentals in Miami Beach alone, giving us intimate knowledge of what it takes to maintain five-star ratings. We know the security procedures at Faena, the check-in requirements at 1 Hotel, and the tight turnaround windows that South Beach rentals demand during Art Basel, Miami Swim Week, and peak season.
 
@@ -839,8 +839,8 @@ For full-time residents, we provide the same hospitality-grade standards to your
         description: "Ocean salt deposits on windows, fixtures, and outdoor furniture. We use protective cleaning products that remove salt residue and help prevent future buildup."
       },
       {
-        title: "Tropical Humidity & Mold",
-        description: "Miami Beach's humidity breeds mold in closets, bathrooms, and AC vents. We address mold-prone areas and use anti-microbial products in vulnerable spaces."
+        title: "Tropical Humidity",
+        description: "Miami Beach's humidity requires attention to moisture-prone areas like closets, bathrooms, and AC vents. We focus on keeping these spaces clean and fresh."
       },
       {
         title: "Guest-Ready Turnovers",
@@ -947,7 +947,7 @@ Whether you're a full-time resident enjoying the Sunny Isles lifestyle, a season
       },
       {
         title: "Salt & Humidity Control",
-        description: "Direct oceanfront exposure means aggressive salt air and humidity. We protect luxury finishes and address mold-prone areas."
+        description: "Direct oceanfront exposure means aggressive salt air and humidity. We protect luxury finishes and pay attention to moisture-prone areas."
       },
       {
         title: "Floor-to-Ceiling Glass",
@@ -1001,7 +1001,7 @@ Aventura families are busy. Between school drop-offs, mall trips, and days at Ti
     cleaningChallenges: [
       {
         title: "High-Rise Living Dust",
-        description: "Aventura's towers mean dust from construction and urban activity. Our HEPA equipment captures fine particles for healthier indoor air."
+        description: "Aventura's towers mean dust from construction and urban activity. Our thorough cleaning methods capture fine particles for cleaner living spaces."
       },
       {
         title: "Lanai & Balcony Care",
@@ -1013,7 +1013,7 @@ Aventura families are busy. Between school drop-offs, mall trips, and days at Ti
       },
       {
         title: "Humidity Control",
-        description: "Proximity to the Intracoastal means humidity challenges. We target mold-prone areas in bathrooms, closets, and around AC vents."
+        description: "Proximity to the Intracoastal means humidity challenges. We pay attention to moisture-prone areas in bathrooms, closets, and around AC vents."
       }
     ],
     propertyManagerContent: "Managing rentals in Aventura's towers? We provide reliable turnover cleaning and maintenance for vacation rentals and seasonal properties. Consistent quality that keeps your guests happy and your reviews positive."
@@ -1065,7 +1065,7 @@ Whether you own a modern estate in Las Olas Isles, a historic bungalow in Victor
       },
       {
         title: "Canal-Side Humidity",
-        description: "Constant water proximity creates humidity that breeds mold. We target vulnerable areas and prevent moisture damage."
+        description: "Constant water proximity creates humidity that can cause buildup. We pay attention to vulnerable areas and help prevent moisture-related issues."
       },
       {
         title: "Boat Lifestyle Cleanup",
@@ -1131,7 +1131,7 @@ From deep cleaning services to recurring maintenance, Metla is dedicated to buil
       },
       {
         title: "Tropical Humidity",
-        description: "Coastal humidity affects every Hollywood home. We target mold-prone areas and maintain healthy indoor environments."
+        description: "Coastal humidity affects every Hollywood home. We pay attention to moisture-prone areas and maintain clean indoor environments."
       }
     ],
     propertyManagerContent: "Hollywood's Broadwalk area is prime vacation rental territory. We handle turnover cleaning for beach condos and cottages with the speed and quality your guests expect. Flexible scheduling during peak season and winter snowbird arrivals."
@@ -1186,7 +1186,7 @@ From seasonal residents who need their units fresh upon arrival to full-time res
       },
       {
         title: "Urban Dust Control",
-        description: "Hallandale's ongoing development means dust in the air. We use HEPA equipment to maintain clean indoor air quality."
+        description: "Hallandale's ongoing development means dust in the air. Our thorough cleaning methods help maintain clean indoor spaces."
       }
     ],
     propertyManagerContent: "Managing vacation rentals in Hallandale Beach's towers? We provide reliable turnover cleaning and seasonal preparation services. Consistent quality for your guests and peace of mind for you."
@@ -1235,7 +1235,7 @@ Whether you're enjoying a day fishing off the pier or dining at the new restaura
       },
       {
         title: "New Construction Dust",
-        description: "Pompano's redevelopment brings construction dust. We use HEPA filtration to capture fine particles."
+        description: "Pompano's redevelopment brings construction dust. Our thorough cleaning captures fine particles throughout your home."
       },
       {
         title: "Vacation Rental Standards",
@@ -1345,7 +1345,7 @@ Don't let housekeeping keep you from enjoying everything Dania Beach offers—fr
       },
       {
         title: "Coastal Humidity",
-        description: "Near-beach location means humidity challenges. We target mold-prone areas and maintain healthy air quality."
+        description: "Near-beach location means humidity challenges. We pay attention to moisture-prone areas and maintain clean air quality."
       },
       {
         title: "Mixed Development",
@@ -1523,7 +1523,7 @@ Whether you need a one-time deep clean before hosting family, regular maintenanc
       },
       {
         title: "Pet Hair & Dander",
-        description: "Many Pembroke Pines families have pets. We use HEPA filtration and specialized techniques for pet households."
+        description: "Many Pembroke Pines families have pets. We use thorough vacuuming and specialized techniques for pet households."
       },
       {
         title: "Large Suburban Homes",
@@ -1575,7 +1575,7 @@ Trust Metla to be your partner in maintaining a beautiful, welcoming environment
     cleaningChallenges: [
       {
         title: "Waterfront Humidity",
-        description: "Properties near the Middle River face humidity challenges. We target mold-prone areas and maintain healthy indoor environments."
+        description: "Properties near the Middle River face humidity challenges. We pay attention to moisture-prone areas and maintain clean indoor environments."
       },
       {
         title: "Active Social Spaces",

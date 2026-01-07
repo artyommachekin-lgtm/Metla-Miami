@@ -158,7 +158,7 @@ const DeepCleaningGuidePage: React.FC = () => {
                             <p className="text-slate-700">
                                 <strong>How to deep clean your Miami home:</strong> Start by decluttering, then dust from top to bottom (ceiling fans to baseboards).
                                 Deep clean bathrooms and kitchen, including inside appliances. Address floors, windows, and high-touch surfaces.
-                                In Miami's 70%+ humidity climate, pay special attention to mold-prone areas like bathroom fans, closets, and AC vents.
+                                In Miami's 70%+ humidity climate, pay special attention to moisture-prone areas like bathroom fans, closets, and AC vents.
                                 A thorough deep clean takes 4-8 hours for a typical home, or you can hire professionals for $200-400.
                             </p>
                         </div>
@@ -172,7 +172,7 @@ const DeepCleaningGuidePage: React.FC = () => {
                             Why Deep Cleaning Matters in Miami
                         </h2>
                         <p className="text-slate-600">
-                            Miami's tropical climate creates unique cleaning challenges. High humidity promotes mold and mildew growth, especially in bathrooms and closets. Salt air from the ocean can leave residue on windows and outdoor surfaces. And the year-round warm weather means more time spent with windows open, allowing dust and allergens inside.
+                            Miami's tropical climate creates unique cleaning challenges. High humidity promotes buildup in bathrooms and closets. Salt air from the ocean can leave residue on windows and outdoor surfaces. And the year-round warm weather means more time spent with windows open, allowing dust and allergens inside.
                         </p>
                         <p className="text-slate-600">
                             Regular deep cleaning—beyond your weekly tidying—addresses these issues before they become problems. It improves indoor air quality, extends the life of your furnishings, and creates a healthier living environment for your family.
@@ -207,7 +207,7 @@ const DeepCleaningGuidePage: React.FC = () => {
                                 <Droplets className="w-6 h-6 text-teal-600 flex-shrink-0 mt-1" />
                                 <div>
                                     <h4 className="font-bold text-slate-900">Combat Humidity</h4>
-                                    <p className="text-slate-600 text-sm">Use a dehumidifier during and after deep cleaning. Check behind furniture and in closets for hidden mold. Leave bathroom doors open to promote airflow.</p>
+                                    <p className="text-slate-600 text-sm">Use a dehumidifier during and after deep cleaning. Check behind furniture and in closets for hidden buildup. Leave bathroom doors open to promote airflow.</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 p-4 bg-teal-50 rounded-lg">

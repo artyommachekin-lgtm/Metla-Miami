@@ -126,7 +126,7 @@ const AboutPage: React.FC = () => {
                                 <h4 className="font-bold text-slate-900 text-lg">Combating Humidity</h4>
                             </div>
                             <p className="text-slate-600 text-sm leading-relaxed">
-                                In lush neighborhoods like Coconut Grove and near the Venetian Pool in Coral Gables, tropical humidity is a constant. We don't just dust; we deep clean to remove the mold, mildew, and heavy buildup that thrive in this climate, ensuring your bathrooms and vents remain fresh and sanitary.
+                                In lush neighborhoods like Coconut Grove and near the Venetian Pool in Coral Gables, tropical humidity is a constant. We don't just dust; we deep clean to address the heavy buildup that accumulates in this climate, keeping your bathrooms and vents clean and fresh.
                             </p>
                         </div>
 

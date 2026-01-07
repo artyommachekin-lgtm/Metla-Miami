@@ -157,7 +157,7 @@ const HouseCleaningPage: React.FC = () => {
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
-                                    <span>Miami averages <strong>70% humidity</strong>, creating ideal conditions for mold growth</span>
+                                    <span>Miami averages <strong>70% humidity</strong>, creating conditions that require extra attention to bathrooms and closets</span>
                                 </li>
                             </ul>
                         </div>

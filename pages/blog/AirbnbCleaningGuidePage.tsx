@@ -208,7 +208,7 @@ const AirbnbCleaningGuidePage: React.FC = () => {
                             </li>
                             <li className="flex items-start gap-2">
                                 <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
-                                <span><strong>AC filters:</strong> Check and clean regularly. Miami's humidity means mold builds up fast.</span>
+                                <span><strong>AC filters:</strong> Check and clean regularly. Miami's humidity means buildup happens fast.</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <CheckCircle className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
