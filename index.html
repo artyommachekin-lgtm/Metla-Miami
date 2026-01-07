@@ -338,6 +338,56 @@
         background-position: -200% 0
       }
     }
+
+    /* Mobile optimizations - inlined from index.css */
+    img {
+      max-width: 100%;
+      height: auto;
+      background-color: #f1f5f9
+    }
+
+    button,
+    a,
+    [role="button"],
+    input,
+    select,
+    textarea {
+      touch-action: manipulation
+    }
+
+    :focus-visible {
+      outline: 2px solid #14b8a6;
+      outline-offset: 2px
+    }
+
+    :focus:not(:focus-visible) {
+      outline: none
+    }
+
+    .jobber-embed-container {
+      min-height: 600px;
+      contain: layout style
+    }
+
+    @media (max-width: 768px) {
+
+      button,
+      a.inline-flex,
+      [role="button"] {
+        min-height: 44px;
+        min-width: 44px
+      }
+
+      body {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeSpeed
+      }
+
+      section:not(:first-child) {
+        content-visibility: auto;
+        contain-intrinsic-size: auto 500px
+      }
+    }
   </style>
 
 
@@ -526,12 +576,6 @@
   }
 }
 </script>
-
-  <!-- Non-critical CSS - Loaded async -->
-  <link rel="stylesheet" href="/index.css" media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet" href="/index.css" />
-  </noscript>
 </head>
 
 <body>
