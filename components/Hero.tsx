@@ -25,11 +25,11 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=50&w=400&fm=webp&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=400&fm=webp&auto=format&fit=crop"
           srcSet="
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=50&w=400&fm=webp&auto=format&fit=crop 400w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=60&w=800&fm=webp&auto=format&fit=crop 800w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=75&w=1400&fm=webp&auto=format&fit=crop 1400w
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=400&fm=webp&auto=format&fit=crop 400w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=40&w=800&fm=webp&auto=format&fit=crop 800w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=50&w=1400&fm=webp&auto=format&fit=crop 1400w
           "
           sizes="100vw"
           alt="Pristine Living Room"
