@@ -25,20 +25,21 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=60&w=480&fm=webp&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=50&w=400&fm=webp&auto=format&fit=crop"
           srcSet="
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=60&w=480&fm=webp&auto=format&fit=crop 480w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=75&w=1024&fm=webp&auto=format&fit=crop 1024w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1920&fm=webp&auto=format&fit=crop 1920w
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=50&w=400&fm=webp&auto=format&fit=crop 400w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=60&w=800&fm=webp&auto=format&fit=crop 800w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=75&w=1400&fm=webp&auto=format&fit=crop 1400w
           "
           sizes="100vw"
           alt="Pristine Living Room"
           className="w-full h-full object-cover opacity-40"
+          style={{ aspectRatio: '3/2' }}
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          width={1920}
-          height={1280}
+          width={1400}
+          height={933}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
       </div>
@@ -61,7 +62,7 @@ const Hero: React.FC = () => {
             Fully vetted, insured, and detail-obsessed.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4" style={{ minHeight: '56px' }}>
             <Link
               to="/booking"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-900 bg-teal-400 hover:bg-teal-300 transition-all rounded-sm shadow-[0_0_20px_rgba(45,212,191,0.3)] cursor-pointer"

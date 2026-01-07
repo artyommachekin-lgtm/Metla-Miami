@@ -61,10 +61,10 @@
 
   <!-- Preload LCP Hero Image for Mobile Performance -->
   <link rel="preload"
-    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=60&w=480&fm=webp&auto=format&fit=crop"
+    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=50&w=400&fm=webp&auto=format&fit=crop"
     as="image" type="image/webp" fetchpriority="high" />
   <link rel="preload"
-    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1920&fm=webp&auto=format&fit=crop"
+    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=75&w=1400&fm=webp&auto=format&fit=crop"
     as="image" type="image/webp" media="(min-width: 768px)" />
 
   <!-- Critical CSS for Above-the-Fold Content -->
@@ -542,34 +542,41 @@
 
   <div id="root"></div>
 
-  <!-- Tailwind CSS - Moved to body for non-blocking load -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind CSS - Async to not block FCP -->
+  <script async src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
-          },
-          colors: {
-            teal: {
-              50: '#f0fdfa',
-              100: '#ccfbf1',
-              200: '#99f6e4',
-              300: '#5eead4',
-              400: '#2dd4bf',
-              500: '#14b8a6',
-              600: '#0d9488',
-              700: '#0f766e',
-              800: '#115e59',
-              900: '#134e4a',
-              950: '#042f2e',
+    // Wait for Tailwind to load before configuring
+    (function waitForTailwind() {
+      if (typeof tailwind !== 'undefined') {
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+                serif: ['Playfair Display', 'serif'],
+              },
+              colors: {
+                teal: {
+                  50: '#f0fdfa',
+                  100: '#ccfbf1',
+                  200: '#99f6e4',
+                  300: '#5eead4',
+                  400: '#2dd4bf',
+                  500: '#14b8a6',
+                  600: '#0d9488',
+                  700: '#0f766e',
+                  800: '#115e59',
+                  900: '#134e4a',
+                  950: '#042f2e',
+                },
+              }
             },
-          }
-        },
-      },
-    }
+          },
+        };
+      } else {
+        setTimeout(waitForTailwind, 10);
+      }
+    })();
     // Remove placeholder once React renders
     document.getElementById('root').addEventListener('DOMNodeInserted', function () {
       var placeholder = document.getElementById('hero-placeholder');
