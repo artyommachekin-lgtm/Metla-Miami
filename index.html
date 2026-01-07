@@ -61,10 +61,10 @@
 
   <!-- Preload LCP Hero Image for Mobile Performance -->
   <link rel="preload"
-    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200&fm=webp&auto=format&fit=crop"
-    as="image" type="image/webp" />
+    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=60&w=480&fm=webp&auto=format&fit=crop"
+    as="image" type="image/webp" fetchpriority="high" />
   <link rel="preload"
-    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2574&fm=webp&auto=format&fit=crop"
+    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1920&fm=webp&auto=format&fit=crop"
     as="image" type="image/webp" media="(min-width: 768px)" />
 
   <!-- Critical CSS for Above-the-Fold Content -->
@@ -506,36 +506,6 @@
 
   <title>Metla House Cleaning | Premium Cleaning Services Miami</title>
 
-  <!-- Tailwind CSS - Load early -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
-          },
-          colors: {
-            teal: {
-              50: '#f0fdfa',
-              100: '#ccfbf1',
-              200: '#99f6e4',
-              300: '#5eead4',
-              400: '#2dd4bf',
-              500: '#14b8a6',
-              600: '#0d9488',
-              700: '#0f766e',
-              800: '#115e59',
-              900: '#134e4a',
-              950: '#042f2e',
-            },
-          }
-        },
-      },
-    }
-  </script>
-
   <!-- Google Fonts - Loaded with display=swap for non-blocking -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
@@ -565,7 +535,48 @@
 </head>
 
 <body>
+  <!-- Inline hero placeholder for instant FCP -->
+  <div id="hero-placeholder"
+    style="position:fixed;top:0;left:0;right:0;height:100vh;background:linear-gradient(to right,#0f172a,#1e293b);z-index:-1;">
+  </div>
+
   <div id="root"></div>
+
+  <!-- Tailwind CSS - Moved to body for non-blocking load -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e',
+            },
+          }
+        },
+      },
+    }
+    // Remove placeholder once React renders
+    document.getElementById('root').addEventListener('DOMNodeInserted', function () {
+      var placeholder = document.getElementById('hero-placeholder');
+      if (placeholder) placeholder.remove();
+    }, { once: true });
+  </script>
+
   <script type="module" src="/index.tsx"></script>
 </body>
 
