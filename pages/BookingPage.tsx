@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import JobberEmbed from '../components/JobberEmbed';
 import { Star } from 'lucide-react';
 import { COMPANY_NAME } from '../constants';
@@ -100,7 +100,7 @@ const BookingPage: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-bold text-teal-400">Is there a minimum charge?</h3>
-                <p className="text-slate-300 mt-1">Our services start at competitive rates based on your home's size and needs. We'll provide transparent pricing with no hidden fees.</p>
+                <p className="text-slate-300 mt-1">Our services start at competitive rates based on your home's size and needs. We'll provide transparent pricing with no hidden fees. See our <Link to="/policies" className="text-teal-400 underline hover:text-teal-300">company policies</Link> for details.</p>
               </div>
             </div>
           </div>

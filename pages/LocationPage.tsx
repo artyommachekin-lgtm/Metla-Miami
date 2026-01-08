@@ -138,7 +138,7 @@ const LocationPage: React.FC = () => {
                       <h3 className="font-bold text-slate-900">5-Star Service</h3>
                     </div>
                     <p className="text-sm text-slate-600">
-                      Consistent, reliable service with a satisfaction guarantee. Rated 4.9/5 by local clients.
+                      Consistent, reliable service with a <Link to="/policies#satisfaction-guarantee" className="text-teal-600 underline hover:text-teal-700">satisfaction guarantee</Link>. Rated 4.9/5 by local clients.
                     </p>
                   </div>
                 </div>
