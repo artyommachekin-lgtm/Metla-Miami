@@ -10,7 +10,7 @@ interface ServiceSchemaProps {
  * References the main organization via @id
  */
 const ServiceSchema: React.FC<ServiceSchemaProps> = ({ service }) => {
-    const baseUrl = 'https://metlahousecleaning.com';
+    const baseUrl = 'https://metlahousecleaningmiami.com';
 
     const schema = {
         "@context": "https://schema.org",

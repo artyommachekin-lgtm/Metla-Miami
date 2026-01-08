@@ -10,12 +10,12 @@ const LocalBusinessSchema: React.FC<LocalBusinessSchemaProps> = ({ location }) =
     const schema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "@id": `https://metlahousecleaning.com/location/${location.slug}`,
+        "@id": `https://metlahousecleaningmiami.com/location/${location.slug}`,
         "name": `${COMPANY_NAME} - ${location.name}`,
-        "image": "https://metlahousecleaning.com/logo.png",
+        "image": "https://metlahousecleaningmiami.com/logo.png",
         "telephone": PHONE_NUMBER_INTL,
         "email": COMPANY_EMAIL,
-        "url": `https://metlahousecleaning.com/location/${location.slug}`,
+        "url": `https://metlahousecleaningmiami.com/location/${location.slug}`,
         "address": {
             "@type": "PostalAddress",
             "streetAddress": COMPANY_ADDRESS.street,
@@ -54,12 +54,12 @@ const LocalBusinessSchema: React.FC<LocalBusinessSchemaProps> = ({ location }) =
             "closes": BUSINESS_HOURS.close.replace(' PM', ':00')
         },
         "sameAs": [
-            "https://metlahousecleaning.com"
+            "https://metlahousecleaningmiami.com"
         ],
         "parentOrganization": {
             "@type": "Organization",
             "name": COMPANY_NAME,
-            "@id": "https://metlahousecleaning.com/#organization"
+            "@id": "https://metlahousecleaningmiami.com/#organization"
         },
         "hasOfferCatalog": {
             "@type": "OfferCatalog",

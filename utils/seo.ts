@@ -25,7 +25,7 @@ export const updateMetaDescription = (description: string): void => {
  * Updates the canonical URL for the page
  */
 export const updateCanonicalUrl = (path: string): void => {
-    const baseUrl = 'https://metlahousecleaning.com';
+    const baseUrl = 'https://metlahousecleaningmiami.com';
     const fullUrl = `${baseUrl}${path}`;
 
     let canonical = document.querySelector('link[rel="canonical"]');

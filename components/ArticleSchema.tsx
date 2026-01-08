@@ -27,7 +27,7 @@ const ArticleSchema: React.FC<ArticleSchemaProps> = ({
     authorJobTitle,
     image = "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1200"
 }) => {
-    const baseUrl = 'https://metlahousecleaning.com';
+    const baseUrl = 'https://metlahousecleaningmiami.com';
 
     // Build author object based on type
     const authorObject: any = {

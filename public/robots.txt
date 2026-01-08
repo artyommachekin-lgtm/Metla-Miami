@@ -1,11 +1,11 @@
 # Metla House Cleaning - Robots.txt
-# https://metlahousecleaning.com
+# https://metlahousecleaningmiami.com
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://metlahousecleaning.com/sitemap.xml
+Sitemap: https://metlahousecleaningmiami.com/sitemap.xml
 
 # Crawl-delay (optional, helps server load)
 Crawl-delay: 1
