@@ -60,6 +60,51 @@ const BookingPage: React.FC = () => {
           </p>
           <p className="mt-4 font-bold text-slate-900">- Sarah J., Coral Gables</p>
         </div>
+
+        {/* SEO Content Section */}
+        <div className="max-w-4xl mx-auto mt-16 space-y-8">
+          <div className="bg-white rounded-xl shadow-md p-8 border border-slate-100">
+            <h2 className="text-2xl font-serif font-bold text-slate-900 mb-4">Book Your Professional House Cleaning in Miami</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              Getting a quote from Metla House Cleaning is simple and takes less than 60 seconds. Our online booking form allows you to describe your cleaning needs, select your preferred date and time, and receive a personalized estimate—all without making a phone call.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              We provide premium residential cleaning services throughout Miami-Dade and Broward counties, including Brickell, Coral Gables, Miami Beach, Fort Lauderdale, and surrounding areas. Whether you need a one-time deep clean, regular maintenance cleaning, or specialized services like move-in/move-out cleaning, our team is ready to help.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+              <div className="flex items-center space-x-2 text-slate-700">
+                <Star className="w-5 h-5 text-yellow-500 fill-current" />
+                <span className="font-medium">4.9/5 Customer Rating</span>
+              </div>
+              <div className="flex items-center space-x-2 text-slate-700">
+                <Star className="w-5 h-5 text-teal-500 fill-current" />
+                <span className="font-medium">Licensed & Insured</span>
+              </div>
+              <div className="flex items-center space-x-2 text-slate-700">
+                <Star className="w-5 h-5 text-blue-500 fill-current" />
+                <span className="font-medium">Background Checked</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-slate-800 rounded-xl shadow-md p-8 text-white">
+            <h2 className="text-2xl font-serif font-bold mb-4">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-bold text-teal-400">How quickly will I receive my quote?</h3>
+                <p className="text-slate-300 mt-1">Most quotes are delivered within 2-4 hours during business hours. For urgent requests, call us directly at (786) 723-7533.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-teal-400">What information do I need to provide?</h3>
+                <p className="text-slate-300 mt-1">We'll ask about your home's square footage, number of bedrooms and bathrooms, and any special cleaning requirements or areas of focus.</p>
+              </div>
+              <div>
+                <h3 className="font-bold text-teal-400">Is there a minimum charge?</h3>
+                <p className="text-slate-300 mt-1">Our services start at competitive rates based on your home's size and needs. We'll provide transparent pricing with no hidden fees.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
