@@ -60,6 +60,11 @@ const Footer: React.FC = () => {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link to="/same-day-cleaning" className="hover:text-teal-400 transition-colors text-sm">
+                    Same Day Cleaning
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

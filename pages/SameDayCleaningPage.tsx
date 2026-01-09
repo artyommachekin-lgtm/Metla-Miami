@@ -214,7 +214,7 @@ const SameDayCleaningPage: React.FC = () => {
                             We provide same day cleaning services throughout Miami-Dade and Broward counties:
                         </p>
                         <div className="flex flex-wrap gap-2">
-                            {LOCATIONS.slice(0, 12).map((loc) => (
+                            {LOCATIONS.map((loc) => (
                                 <Link
                                     key={loc.slug}
                                     to={`/location/${loc.slug}`}
