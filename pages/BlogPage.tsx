@@ -23,7 +23,7 @@ export const BLOG_POSTS = [
         category: 'Checklists',
         readTime: '6 min read',
         datePublished: '2024-01-10',
-        image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&fm=webp',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&fm=webp',
         icon: Building2
     },
     {
@@ -53,7 +53,7 @@ export const BLOG_POSTS = [
         category: 'Specialty Cleaning',
         readTime: '7 min read',
         datePublished: '2024-01-12',
-        image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&fm=webp',
+        image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&fm=webp',
         icon: Hammer
     }
 ];
