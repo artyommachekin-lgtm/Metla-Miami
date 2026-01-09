@@ -64,14 +64,25 @@
 
   <!-- Preload LCP Hero Image for Mobile Performance -->
   <link rel="preload"
-    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=15&w=480&fm=webp&auto=format&fit=crop"
+    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=10&w=480&fm=webp&auto=format&fit=crop"
     as="image" type="image/webp" fetchpriority="high" />
   <link rel="preload"
-    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=35&w=1200&fm=webp&auto=format&fit=crop"
+    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=1200&fm=webp&auto=format&fit=crop"
     as="image" type="image/webp" media="(min-width: 1024px)" />
 
   <!-- Critical CSS for Above-the-Fold Content -->
   <style>
+    /* CLS prevention - CTA button min-height */
+    :root {
+      --cta-min-height: 112px;
+    }
+
+    @media (min-width: 640px) {
+      :root {
+        --cta-min-height: 0;
+      }
+    }
+
     /* Critical CSS - Inline for fastest render */
     *,
     ::before,

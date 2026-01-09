@@ -25,11 +25,11 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=15&w=480&fm=webp&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=10&w=480&fm=webp&auto=format&fit=crop"
           srcSet="
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=15&w=480&fm=webp&auto=format&fit=crop 480w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=25&w=800&fm=webp&auto=format&fit=crop 800w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=35&w=1200&fm=webp&auto=format&fit=crop 1200w
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=10&w=480&fm=webp&auto=format&fit=crop 480w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=20&w=800&fm=webp&auto=format&fit=crop 800w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=1200&fm=webp&auto=format&fit=crop 1200w
           "
           sizes="(max-width: 640px) 480px, (max-width: 1024px) 800px, 1200px"
           alt="Pristine Living Room"
@@ -62,8 +62,8 @@ const Hero: React.FC = () => {
             Fully vetted, insured, and detail-obsessed.
           </p>
 
-          {/* CTA buttons - explicit height for mobile CLS, auto for desktop */}
-          <div className="flex flex-col sm:flex-row gap-4 min-h-[112px] sm:min-h-0">
+          {/* CTA buttons - use inline style for reliable CLS fix (Tailwind CDN doesn't support arbitrary values) */}
+          <div className="flex flex-col sm:flex-row gap-4" style={{ minHeight: 'var(--cta-min-height, 112px)' }}>
             <Link
               to="/booking"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-900 bg-teal-400 hover:bg-teal-300 transition-all rounded-sm shadow-[0_0_20px_rgba(45,212,191,0.3)] cursor-pointer"
