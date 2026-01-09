@@ -21,15 +21,15 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className="relative bg-slate-900 text-white pb-24">
+    <div className="relative bg-slate-900 text-white pb-24" style={{ minHeight: '600px' }}>
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=400&fm=webp&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=20&w=320&fm=webp&auto=format&fit=crop"
           srcSet="
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=400&fm=webp&auto=format&fit=crop 400w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=40&w=800&fm=webp&auto=format&fit=crop 800w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=50&w=1400&fm=webp&auto=format&fit=crop 1400w
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=20&w=320&fm=webp&auto=format&fit=crop 320w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=640&fm=webp&auto=format&fit=crop 640w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=40&w=1200&fm=webp&auto=format&fit=crop 1200w
           "
           sizes="100vw"
           alt="Pristine Living Room"
