@@ -5,7 +5,37 @@ import { getIcon } from '../utils/icons';
 import { Check, ArrowDownCircle, ArrowRight, BookOpen, MapPin } from 'lucide-react';
 import { updatePageSEO, resetSEO } from '../utils/seo';
 import ServiceSchema from '../components/ServiceSchema';
+import FAQSchema, { FAQItem } from '../components/FAQSchema';
 import { BLOG_POSTS } from './BlogPage';
+
+// Service-specific FAQs for rich snippets
+const SERVICE_FAQS: Record<string, FAQItem[]> = {
+  'standard-cleaning': [
+    { question: 'What is included in a standard house cleaning?', answer: 'Our standard cleaning includes dusting all surfaces, vacuuming and mopping floors, cleaning bathrooms (toilet, sink, shower/tub, mirrors), kitchen cleaning (counters, stovetop, sink, exterior of appliances), and general tidying. We follow a 50-point checklist to ensure consistent results.' },
+    { question: 'How often should I schedule standard cleaning?', answer: 'Most clients choose weekly or bi-weekly cleanings to maintain their home. Weekly service is ideal for busy households, families with children or pets, while bi-weekly works well for smaller homes or individuals. We recommend starting with bi-weekly and adjusting based on your needs.' },
+    { question: 'Do I need to be home during the cleaning?', answer: 'No, many of our clients provide a key, code, or smart lock access. All our cleaners are background-checked, insured, and bonded for your peace of mind. We will coordinate secure access arrangements during scheduling.' },
+  ],
+  'deep-cleaning-miami': [
+    { question: 'What is the difference between deep cleaning and regular cleaning?', answer: 'Deep cleaning is more intensive and thorough than regular cleaning. It includes everything in a standard clean plus: cleaning inside appliances (oven, refrigerator, microwave), washing baseboards and door frames, cleaning inside cabinets, sanitizing light switches and fixtures, and addressing built-up grime in corners and hard-to-reach areas.' },
+    { question: 'How long does a deep cleaning take?', answer: 'A typical deep cleaning takes 4-8 hours depending on your home\'s size and condition. A 2-bedroom home usually takes 4-5 hours, while larger homes or those that haven\'t been deep cleaned recently may take 6-8 hours.' },
+    { question: 'How often should I get a deep cleaning?', answer: 'We recommend deep cleaning every 3-6 months, or before starting a recurring cleaning service. Seasonal deep cleans (spring and fall) help maintain a healthy home environment throughout the year.' },
+  ],
+  'post-construction-cleaning-miami': [
+    { question: 'What does post-construction cleaning include?', answer: 'Post-construction cleaning removes all construction debris, fine dust from every surface, sticker residue from windows and fixtures, paint splatters, and sanitizes the entire space. We clean inside new cabinets and closets, wipe down all fixtures, and make your renovated space move-in ready.' },
+    { question: 'When should I schedule post-construction cleaning?', answer: 'Schedule the cleaning after all construction work is complete, fixtures are installed, and contractors have finished their rough cleaning. We recommend waiting 24-48 hours after final construction to allow any remaining dust to settle.' },
+    { question: 'Is post-construction cleaning safe for new surfaces?', answer: 'Yes, we use appropriate cleaning methods and products for new materials including hardwood floors, granite countertops, stainless steel appliances, and painted surfaces. Our team is trained in proper techniques to protect your investment.' },
+  ],
+  'vacation-rental-cleaning-airbnb': [
+    { question: 'How quickly can you turn over my vacation rental?', answer: 'Standard turnover cleaning takes 2-4 hours depending on property size. We offer same-day and emergency cleaning for last-minute bookings. Many hosts add us to their Airbnb calendar access so we can coordinate directly with check-out and check-in times.' },
+    { question: 'Do you offer linen service for vacation rentals?', answer: 'Yes, we can strip and remake beds with fresh linens, wash and fold towels, and ensure your rental has hotel-quality presentation. We can work with your existing linens or coordinate with a linen service provider.' },
+    { question: 'Will you report any damage or issues found?', answer: 'Absolutely. We document any damage, missing items, or maintenance issues with photos and notify you immediately. This helps protect your property and provides documentation for guest damage claims if needed.' },
+  ],
+  'move-in-out-cleaning': [
+    { question: 'What areas are covered in move-in/move-out cleaning?', answer: 'This exhaustive cleaning covers every inch of an empty property: inside all cabinets, closets, and drawers; inside all appliances (oven, refrigerator, dishwasher); bathrooms sanitized top to bottom; light fixtures cleaned; baseboards and door frames; and all floors deep cleaned.' },
+    { question: 'Can move-out cleaning help get my deposit back?', answer: 'Yes! A professional move-out cleaning significantly increases your chances of getting your full security deposit returned. We meet or exceed property management cleaning standards and can provide a cleaning receipt for documentation.' },
+    { question: 'Should I clean before or after movers?', answer: 'For move-out: Schedule cleaning after all belongings are removed for the most thorough results. For move-in: Clean before your furniture arrives so we can reach all areas and you can move into a fresh, sanitized home.' },
+  ],
+};
 
 const ServicePage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -29,9 +59,13 @@ const ServicePage: React.FC = () => {
 
   if (!service) return <Navigate to="/" />;
 
+  // Get service-specific FAQs
+  const faqs = SERVICE_FAQS[service.slug] || [];
+
   return (
     <div className="bg-white min-h-screen">
       <ServiceSchema service={service} />
+      {faqs.length > 0 && <FAQSchema faqs={faqs} />}
       <div className="bg-slate-900 text-white pt-32 pb-20">
         <div className="container mx-auto px-4 text-center">
           {React.createElement(getIcon(service.iconName), { className: "w-16 h-16 text-teal-400 mx-auto mb-6" })}

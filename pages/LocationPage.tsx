@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { updatePageSEO, resetSEO } from '../utils/seo';
 import LocalBusinessSchema from '../components/LocalBusinessSchema';
+import FAQSchema, { FAQItem } from '../components/FAQSchema';
 
 const LocationPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -41,9 +42,26 @@ const LocationPage: React.FC = () => {
     ? SERVICES.filter(s => location.popularServiceIds?.includes(s.id))
     : SERVICES.slice(0, 3);
 
+  // Location-specific FAQs for rich snippets
+  const locationFaqs: FAQItem[] = [
+    {
+      question: `How much does house cleaning cost in ${location.name}?`,
+      answer: `House cleaning prices in ${location.name} vary based on home size and service type. Standard cleaning typically ranges from $120-$300, deep cleaning from $200-$500, and specialized services are quoted based on specific needs. Contact us for a free personalized estimate.`
+    },
+    {
+      question: `Do you serve all areas of ${location.name}?`,
+      answer: `Yes, Metla House Cleaning provides full coverage throughout ${location.name} and surrounding areas. Our team knows the area well and can typically accommodate same-week or even same-day appointments depending on availability.`
+    },
+    {
+      question: `Are your ${location.name} cleaners background checked?`,
+      answer: `Absolutely. Every member of our ${location.name} cleaning team undergoes a thorough background check, is fully insured and bonded, and receives professional training. Your safety and peace of mind are our top priorities.`
+    },
+  ];
+
   return (
     <div className="bg-white min-h-screen">
       <LocalBusinessSchema location={location} />
+      <FAQSchema faqs={locationFaqs} />
       {/* Hero Section */}
       <section className="bg-slate-900 text-white pt-32 pb-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-teal-900/30 to-slate-900" />
