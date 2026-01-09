@@ -8,16 +8,16 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900" role="contentinfo">
       <div className="container mx-auto px-4">
 
-        {/* Top Section: Brand/Contact, Services, Quick Links, Guarantee */}
-        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-8 mb-16 border-b border-slate-900/50 pb-12">
+        {/* Top Section: 4-column grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16 border-b border-slate-900/50 pb-12">
 
-          {/* Brand & Contact Info - Left Aligned with LocalBusiness microdata */}
-          <div className="lg:w-1/4" itemScope itemType="https://schema.org/LocalBusiness">
+          {/* Brand & Contact Info */}
+          <div itemScope itemType="https://schema.org/LocalBusiness">
             <meta itemProp="name" content={COMPANY_NAME} />
             <h3 className="text-2xl font-serif font-bold text-white mb-6 tracking-tighter">
               METLA<span className="text-teal-500">.</span>
             </h3>
-            <p className="mb-6 leading-relaxed text-sm max-w-sm" itemProp="description">
+            <p className="mb-6 leading-relaxed text-sm" itemProp="description">
               Premium residential cleaning serving Miami-Dade and Broward County.
               Hospitality-grade service for your home.
             </p>
@@ -51,8 +51,8 @@ const Footer: React.FC = () => {
             </address>
           </div>
 
-          {/* Services Navigation */}
-          <nav className="lg:w-1/4" aria-label="Our Services">
+          {/* Services */}
+          <nav aria-label="Our Services">
             <h4 className="text-white font-bold uppercase tracking-widest mb-6 text-sm">Services</h4>
             <ul className="space-y-3">
               {SERVICES.map((s) => (
@@ -70,45 +70,33 @@ const Footer: React.FC = () => {
             </ul>
           </nav>
 
-          {/* Quick Links Navigation */}
-          <nav className="lg:w-1/4" aria-label="Quick Links">
+          {/* Quick Links */}
+          <nav aria-label="Quick Links">
             <h4 className="text-white font-bold uppercase tracking-widest mb-6 text-sm">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="hover:text-teal-400 transition-colors text-sm">
-                  Home
-                </Link>
+                <Link to="/" className="hover:text-teal-400 transition-colors text-sm">Home</Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-teal-400 transition-colors text-sm">
-                  About Us
-                </Link>
+                <Link to="/about" className="hover:text-teal-400 transition-colors text-sm">About Us</Link>
               </li>
               <li>
-                <Link to="/house-cleaning" className="hover:text-teal-400 transition-colors text-sm">
-                  House Cleaning Miami
-                </Link>
+                <Link to="/house-cleaning" className="hover:text-teal-400 transition-colors text-sm">House Cleaning Miami</Link>
               </li>
               <li>
-                <Link to="/blog" className="hover:text-teal-400 transition-colors text-sm">
-                  Cleaning Tips & Blog
-                </Link>
+                <Link to="/blog" className="hover:text-teal-400 transition-colors text-sm">Cleaning Tips & Blog</Link>
               </li>
               <li>
-                <Link to="/booking" className="hover:text-teal-400 transition-colors text-sm font-medium text-teal-400">
-                  Book Now →
-                </Link>
+                <Link to="/booking" className="hover:text-teal-400 transition-colors text-sm font-medium text-teal-400">Book Now →</Link>
               </li>
               <li>
-                <Link to="/policies" className="hover:text-teal-400 transition-colors text-sm">
-                  Policies & Terms
-                </Link>
+                <Link to="/policies" className="hover:text-teal-400 transition-colors text-sm">Policies & Terms</Link>
               </li>
             </ul>
           </nav>
 
-          {/* Guarantee - Right Aligned */}
-          <div className="lg:w-1/4">
+          {/* Guarantee */}
+          <div>
             <h4 className="text-white font-bold uppercase tracking-widest mb-6 text-sm">The Guarantee</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm group">
@@ -136,7 +124,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Section: Full Width Locations */}
+        {/* Locations Section */}
         <nav className="mb-12" aria-label="Service Locations">
           <h4 className="text-white font-bold uppercase tracking-widest mb-8 text-sm text-center">Locations Served</h4>
           <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-3">
@@ -150,6 +138,7 @@ const Footer: React.FC = () => {
           </ul>
         </nav>
 
+        {/* Copyright */}
         <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-sm text-slate-600">
           <div>
             &copy; {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.
@@ -165,6 +154,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Legal Disclaimer */}
         <div className="mt-8 pt-8 border-t border-slate-900/50 text-xs text-slate-600 text-center max-w-4xl mx-auto leading-relaxed">
           <p>
             {COMPANY_NAME} is not the employer of the domestic worker referred to you. The domestic worker may be your employee or an independent contractor depending on the relationship you have with him or her. If you direct and control the manner and means by which the domestic worker performs his or her work you may have employer responsibilities, including employment taxes and workers' compensation.
