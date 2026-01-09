@@ -8,11 +8,11 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900" role="contentinfo">
       <div className="container mx-auto px-4">
 
-        {/* Top Section: 4-column grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-16 border-b border-slate-900/50 pb-12">
+        {/* Top Section: Use inline flex styles to guarantee layout */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', marginBottom: '4rem', borderBottom: '1px solid rgba(15, 23, 42, 0.5)', paddingBottom: '3rem' }}>
 
           {/* Brand & Contact Info */}
-          <div itemScope itemType="https://schema.org/LocalBusiness">
+          <div style={{ flex: '1 1 250px', minWidth: '250px' }} itemScope itemType="https://schema.org/LocalBusiness">
             <meta itemProp="name" content={COMPANY_NAME} />
             <h3 className="text-2xl font-serif font-bold text-white mb-6 tracking-tighter">
               METLA<span className="text-teal-500">.</span>
@@ -21,22 +21,12 @@ const Footer: React.FC = () => {
               Premium residential cleaning serving Miami-Dade and Broward County.
               Hospitality-grade service for your home.
             </p>
-
-            {/* NAP Contact Info */}
             <address className="space-y-3 not-italic">
-              <a
-                href={`tel:${PHONE_NUMBER}`}
-                className="flex items-center gap-3 text-white font-medium hover:text-teal-400 transition-colors"
-                itemProp="telephone"
-              >
+              <a href={`tel:${PHONE_NUMBER}`} className="flex items-center gap-3 text-white font-medium hover:text-teal-400 transition-colors" itemProp="telephone">
                 <Phone size={16} className="text-teal-500" aria-hidden="true" />
                 {PHONE_NUMBER}
               </a>
-              <a
-                href={`mailto:${COMPANY_EMAIL}`}
-                className="flex items-center gap-3 hover:text-teal-400 transition-colors text-sm"
-                itemProp="email"
-              >
+              <a href={`mailto:${COMPANY_EMAIL}`} className="flex items-center gap-3 hover:text-teal-400 transition-colors text-sm" itemProp="email">
                 <Mail size={16} className="text-teal-500" aria-hidden="true" />
                 {COMPANY_EMAIL}
               </a>
@@ -52,69 +42,53 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Services */}
-          <nav aria-label="Our Services">
+          <nav style={{ flex: '1 1 180px', minWidth: '180px' }} aria-label="Our Services">
             <h4 className="text-white font-bold uppercase tracking-widest mb-6 text-sm">Services</h4>
             <ul className="space-y-3">
               {SERVICES.map((s) => (
                 <li key={s.id}>
-                  <Link to={`/service/${s.slug}`} className="hover:text-teal-400 transition-colors text-sm">
-                    {s.title}
-                  </Link>
+                  <Link to={`/service/${s.slug}`} className="hover:text-teal-400 transition-colors text-sm">{s.title}</Link>
                 </li>
               ))}
               <li>
-                <Link to="/same-day-cleaning" className="hover:text-teal-400 transition-colors text-sm">
-                  Same Day Cleaning
-                </Link>
+                <Link to="/same-day-cleaning" className="hover:text-teal-400 transition-colors text-sm">Same Day Cleaning</Link>
               </li>
             </ul>
           </nav>
 
           {/* Quick Links */}
-          <nav aria-label="Quick Links">
+          <nav style={{ flex: '1 1 180px', minWidth: '180px' }} aria-label="Quick Links">
             <h4 className="text-white font-bold uppercase tracking-widest mb-6 text-sm">Quick Links</h4>
             <ul className="space-y-3">
-              <li>
-                <Link to="/" className="hover:text-teal-400 transition-colors text-sm">Home</Link>
-              </li>
-              <li>
-                <Link to="/about" className="hover:text-teal-400 transition-colors text-sm">About Us</Link>
-              </li>
-              <li>
-                <Link to="/house-cleaning" className="hover:text-teal-400 transition-colors text-sm">House Cleaning Miami</Link>
-              </li>
-              <li>
-                <Link to="/blog" className="hover:text-teal-400 transition-colors text-sm">Cleaning Tips & Blog</Link>
-              </li>
-              <li>
-                <Link to="/booking" className="hover:text-teal-400 transition-colors text-sm font-medium text-teal-400">Book Now →</Link>
-              </li>
-              <li>
-                <Link to="/policies" className="hover:text-teal-400 transition-colors text-sm">Policies & Terms</Link>
-              </li>
+              <li><Link to="/" className="hover:text-teal-400 transition-colors text-sm">Home</Link></li>
+              <li><Link to="/about" className="hover:text-teal-400 transition-colors text-sm">About Us</Link></li>
+              <li><Link to="/house-cleaning" className="hover:text-teal-400 transition-colors text-sm">House Cleaning Miami</Link></li>
+              <li><Link to="/blog" className="hover:text-teal-400 transition-colors text-sm">Cleaning Tips & Blog</Link></li>
+              <li><Link to="/booking" className="hover:text-teal-400 transition-colors text-sm font-medium text-teal-400">Book Now →</Link></li>
+              <li><Link to="/policies" className="hover:text-teal-400 transition-colors text-sm">Policies & Terms</Link></li>
             </ul>
           </nav>
 
           {/* Guarantee */}
-          <div>
+          <div style={{ flex: '1 1 250px', minWidth: '250px' }}>
             <h4 className="text-white font-bold uppercase tracking-widest mb-6 text-sm">The Guarantee</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3 text-sm group">
-                <div className="w-1.5 h-1.5 bg-teal-500 rounded-full flex-shrink-0 mt-1.5 group-hover:scale-150 transition-transform" />
+                <div className="w-1.5 h-1.5 bg-teal-500 rounded-full flex-shrink-0 mt-1.5" />
                 <span>
                   <strong className="text-slate-200 block">100% Satisfaction Promise</strong>
                   We reclean for free if you aren't happy.
                 </span>
               </li>
               <li className="flex items-start gap-3 text-sm group">
-                <div className="w-1.5 h-1.5 bg-teal-500 rounded-full flex-shrink-0 mt-1.5 group-hover:scale-150 transition-transform" />
+                <div className="w-1.5 h-1.5 bg-teal-500 rounded-full flex-shrink-0 mt-1.5" />
                 <span>
                   <strong className="text-slate-200 block">Fully Insured</strong>
                   Fully insured for your protection.
                 </span>
               </li>
               <li className="flex items-start gap-3 text-sm group">
-                <div className="w-1.5 h-1.5 bg-teal-500 rounded-full flex-shrink-0 mt-1.5 group-hover:scale-150 transition-transform" />
+                <div className="w-1.5 h-1.5 bg-teal-500 rounded-full flex-shrink-0 mt-1.5" />
                 <span>
                   <strong className="text-slate-200 block">Strictly Vetted</strong>
                   Background checked & interviewed.
@@ -127,30 +101,22 @@ const Footer: React.FC = () => {
         {/* Locations Section */}
         <nav className="mb-12" aria-label="Service Locations">
           <h4 className="text-white font-bold uppercase tracking-widest mb-8 text-sm text-center">Locations Served</h4>
-          <ul className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-3">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '0.5rem 1rem' }}>
             {LOCATIONS.map((l) => (
-              <li key={l.slug}>
-                <Link to={`/location/${l.slug}`} className="text-xs text-slate-500 hover:text-teal-400 transition-colors block truncate">
-                  {l.name}
-                </Link>
-              </li>
+              <Link key={l.slug} to={`/location/${l.slug}`} className="text-xs text-slate-500 hover:text-teal-400 transition-colors block truncate">
+                {l.name}
+              </Link>
             ))}
-          </ul>
+          </div>
         </nav>
 
         {/* Copyright */}
         <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-sm text-slate-600">
-          <div>
-            &copy; {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.
-          </div>
+          <div>&copy; {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.</div>
           <div className="flex gap-4">
-            <Link to="/policies" className="hover:text-teal-400 transition-colors">
-              Privacy Policy
-            </Link>
+            <Link to="/policies" className="hover:text-teal-400 transition-colors">Privacy Policy</Link>
             <span className="text-slate-700">|</span>
-            <Link to="/policies" className="hover:text-teal-400 transition-colors">
-              Terms of Service
-            </Link>
+            <Link to="/policies" className="hover:text-teal-400 transition-colors">Terms of Service</Link>
           </div>
         </div>
 
