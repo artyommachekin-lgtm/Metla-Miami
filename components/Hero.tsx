@@ -62,7 +62,11 @@ const Hero: React.FC = () => {
             Fully vetted, insured, and detail-obsessed.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4" style={{ minHeight: '56px' }}>
+          {/* CTA buttons - explicit height to prevent CLS */}
+          <div
+            className="flex flex-col sm:flex-row gap-4"
+            style={{ minHeight: '112px' }}
+          >
             <Link
               to="/booking"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-900 bg-teal-400 hover:bg-teal-300 transition-all rounded-sm shadow-[0_0_20px_rgba(45,212,191,0.3)] cursor-pointer"
