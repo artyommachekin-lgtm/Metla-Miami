@@ -25,21 +25,21 @@ const Hero: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=20&w=320&fm=webp&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=15&w=480&fm=webp&auto=format&fit=crop"
           srcSet="
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=20&w=320&fm=webp&auto=format&fit=crop 320w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=640&fm=webp&auto=format&fit=crop 640w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=40&w=1200&fm=webp&auto=format&fit=crop 1200w
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=15&w=480&fm=webp&auto=format&fit=crop 480w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=25&w=800&fm=webp&auto=format&fit=crop 800w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=35&w=1200&fm=webp&auto=format&fit=crop 1200w
           "
-          sizes="100vw"
+          sizes="(max-width: 640px) 480px, (max-width: 1024px) 800px, 1200px"
           alt="Pristine Living Room"
           className="w-full h-full object-cover opacity-40"
           style={{ aspectRatio: '3/2' }}
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          width={1400}
-          height={933}
+          width={1200}
+          height={800}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
       </div>
