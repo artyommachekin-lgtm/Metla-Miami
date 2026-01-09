@@ -32,7 +32,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <!-- Resource Hints for Performance - Critical origins first -->
+  <!-- Resource Hints for Performance - Preload critical scripts first -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
   <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
   <link rel="preconnect" href="https://esm.sh" crossorigin />

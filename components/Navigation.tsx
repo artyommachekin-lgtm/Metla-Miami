@@ -11,16 +11,7 @@ const Navigation: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 20);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -34,17 +25,9 @@ const Navigation: React.FC = () => {
     if (location.pathname === '/') {
       const element = document.getElementById(targetId);
       if (element) {
-        // Use RAF to batch DOM reads and prevent forced reflow
-        requestAnimationFrame(() => {
-          const offset = 80;
-          const elementTop = element.offsetTop;
-          const offsetPosition = elementTop - offset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-        });
+        const offset = 80;
+        const elementTop = element.offsetTop;
+        window.scrollTo({ top: elementTop - offset, behavior: 'smooth' });
       }
     } else {
       navigate('/', { state: { targetId } });
