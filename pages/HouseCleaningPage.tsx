@@ -441,7 +441,7 @@ const HouseCleaningPage: React.FC = () => {
                         </p>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-                            {LOCATIONS.slice(0, 12).map((loc) => (
+                            {LOCATIONS.map((loc) => (
                                 <Link
                                     key={loc.slug}
                                     to={`/location/${loc.slug}`}

@@ -177,7 +177,7 @@ const ServicePage: React.FC = () => {
               <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4">Available In These Locations</h3>
               <p className="text-slate-600 mb-6">We provide {service.title.toLowerCase()} services throughout South Florida:</p>
               <div className="flex flex-wrap gap-2 mb-8">
-                {LOCATIONS.slice(0, 6).map((loc) => (
+                {LOCATIONS.map((loc) => (
                   <Link
                     key={loc.slug}
                     to={`/location/${loc.slug}`}
