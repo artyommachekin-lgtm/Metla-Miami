@@ -32,17 +32,18 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <!-- Resource Hints for Performance - Preload critical scripts first -->
-  <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
-  <link rel="modulepreload" href="https://esm.sh/react@18.2.0" />
-  <link rel="modulepreload" href="https://esm.sh/react-dom@18.2.0/client" />
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
-  <link rel="preconnect" href="https://esm.sh" crossorigin />
-  <link rel="dns-prefetch" href="https://esm.sh" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Resource Hints - Prioritize LCP image origin first -->
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- Preload critical script -->
+  <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
+
+  <!-- DNS prefetch for additional origins -->
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
   <!-- Preconnect for Jobber Booking Form (speeds up form load) -->
   <link rel="preconnect" href="https://d3ey4dbjkt2f6s.cloudfront.net" crossorigin />
   <link rel="preconnect" href="https://clienthub.getjobber.com" crossorigin />
