@@ -37,7 +37,7 @@ const HouseCleaningPage: React.FC = () => {
         },
         {
             question: "Are your house cleaners insured and background checked?",
-            answer: "Yes, all Metla House Cleaning professionals are fully insured with $2 million liability coverage and undergo comprehensive background checks. We only hire 1 in 50 applicants, ensuring you receive service from vetted, trustworthy professionals."
+            answer: "Yes, all Metla House Cleaning professionals are fully insured and undergo comprehensive background checks. We only hire 1 in 50 applicants, ensuring you receive service from vetted, trustworthy professionals."
         },
         {
             question: "Do I need to be home during the cleaning?",
@@ -381,7 +381,7 @@ const HouseCleaningPage: React.FC = () => {
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-2">Fully Insured</h3>
                                 <p className="text-slate-600">
-                                    $2 million liability coverage protects you and your property. Clean with complete peace of mind.
+                                    Full liability coverage protects you and your property. Clean with complete peace of mind.
                                 </p>
                             </div>
                             <div className="text-center">

@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
                   <div className="w-1.5 h-1.5 bg-teal-500 rounded-full flex-shrink-0 mt-1.5 group-hover:scale-150 transition-transform" />
                   <span>
                     <strong className="text-slate-200 block">Fully Insured</strong>
-                    Protected up to $2M Liability.
+                    Fully insured for your protection.
                   </span>
                 </li>
                 <li className="flex items-start gap-3 text-sm group">

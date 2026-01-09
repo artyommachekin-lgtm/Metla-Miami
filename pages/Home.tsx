@@ -51,7 +51,7 @@ const Home: React.FC = () => {
             <div className="p-6 bg-slate-50 rounded-lg border border-slate-100">
               <ShieldCheck className="w-10 h-10 text-teal-500 mb-4" />
               <h3 className="font-bold text-xl mb-2 text-slate-900">100% Insured</h3>
-              <p className="text-slate-600">Your property is protected up to $2M. We treat your sanctuary with the respect it deserves.</p>
+              <p className="text-slate-600">Your property is fully protected. We treat your sanctuary with the respect it deserves.</p>
             </div>
             <div className="p-6 bg-slate-50 rounded-lg border border-slate-100">
               <UserCheck className="w-10 h-10 text-teal-500 mb-4" />
