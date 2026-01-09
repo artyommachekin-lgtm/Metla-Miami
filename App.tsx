@@ -17,6 +17,7 @@ import MoveOutChecklistPage from './pages/blog/MoveOutChecklistPage';
 import StandardCleaningBenefitsPage from './pages/blog/StandardCleaningBenefitsPage';
 import AirbnbCleaningGuidePage from './pages/blog/AirbnbCleaningGuidePage';
 import PostConstructionCleaningPage from './pages/blog/PostConstructionCleaningPage';
+import SameDayCleaningPage from './pages/SameDayCleaningPage';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -41,6 +42,7 @@ const App: React.FC = () => {
           <Route path="/policies" element={<PoliciesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/house-cleaning" element={<HouseCleaningPage />} />
+          <Route path="/same-day-cleaning" element={<SameDayCleaningPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/deep-cleaning-guide-miami" element={<DeepCleaningGuidePage />} />
           <Route path="/blog/move-out-cleaning-checklist" element={<MoveOutChecklistPage />} />
