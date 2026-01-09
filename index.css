@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Metla House Cleaning - Global Styles */
 
 /* Smooth scrolling for the entire page */

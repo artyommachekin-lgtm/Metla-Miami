@@ -32,14 +32,7 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <!-- Resource Hints for Performance - Preload critical scripts first -->
-  <link rel="preload" href="https://cdn.tailwindcss.com" as="script" />
-  <link rel="modulepreload" href="https://esm.sh/react@18.2.0" />
-  <link rel="modulepreload" href="https://esm.sh/react-dom@18.2.0/client" />
-  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
-  <link rel="preconnect" href="https://esm.sh" crossorigin />
-  <link rel="dns-prefetch" href="https://esm.sh" />
+  <!-- Resource Hints for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
@@ -599,41 +592,6 @@
   </div>
 
   <div id="root"></div>
-
-  <!-- Tailwind CSS - Sync to prevent CLS from unstyled content flash -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['Playfair Display', 'serif'],
-          },
-          colors: {
-            teal: {
-              50: '#f0fdfa',
-              100: '#ccfbf1',
-              200: '#99f6e4',
-              300: '#5eead4',
-              400: '#2dd4bf',
-              500: '#14b8a6',
-              600: '#0d9488',
-              700: '#0f766e',
-              800: '#115e59',
-              900: '#134e4a',
-              950: '#042f2e',
-            },
-          }
-        },
-      },
-    };
-    // Remove placeholder once React renders
-    document.getElementById('root').addEventListener('DOMNodeInserted', function () {
-      var placeholder = document.getElementById('hero-placeholder');
-      if (placeholder) placeholder.remove();
-    }, { once: true });
-  </script>
 
   <script type="module" src="/index.tsx"></script>
 </body>
