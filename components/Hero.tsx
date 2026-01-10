@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-slate-900 text-white pb-24">
+    <div className="relative min-h-[600px] bg-slate-900 text-white pb-24">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
