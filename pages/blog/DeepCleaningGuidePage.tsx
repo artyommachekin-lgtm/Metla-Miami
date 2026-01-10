@@ -129,7 +129,7 @@ const DeepCleaningGuidePage: React.FC = () => {
                             <span className="bg-teal-500 text-white text-sm font-bold px-3 py-1 rounded-full">
                                 Cleaning Guides
                             </span>
-                            <span className="flex items-center gap-1 text-slate-400 text-sm">
+                            <span className="flex items-center gap-1 text-slate-500 text-sm">
                                 <Clock className="w-4 h-4" /> 8 min read
                             </span>
                         </div>
@@ -139,7 +139,7 @@ const DeepCleaningGuidePage: React.FC = () => {
                         <p className="text-xl text-slate-300 mb-4">
                             Learn how to deep clean your home like a professional, with special tips for Miami's unique climate challenges.
                         </p>
-                        <div className="flex items-center gap-2 text-slate-400 text-sm">
+                        <div className="flex items-center gap-2 text-slate-500 text-sm">
                             <Calendar className="w-4 h-4" />
                             <span>Published January 15, 2024</span>
                         </div>

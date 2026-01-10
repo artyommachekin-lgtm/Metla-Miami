@@ -134,7 +134,7 @@ const AirbnbCleaningGuidePage: React.FC = () => {
                             <span className="bg-pink-500 text-white text-sm font-bold px-3 py-1 rounded-full">
                                 Vacation Rentals
                             </span>
-                            <span className="flex items-center gap-1 text-slate-400 text-sm">
+                            <span className="flex items-center gap-1 text-slate-500 text-sm">
                                 <Clock className="w-4 h-4" /> 7 min read
                             </span>
                         </div>
@@ -144,7 +144,7 @@ const AirbnbCleaningGuidePage: React.FC = () => {
                         <p className="text-xl text-slate-300 mb-4">
                             Master the art of vacation rental turnovers and keep those 5-star reviews coming.
                         </p>
-                        <div className="flex items-center gap-2 text-slate-400 text-sm">
+                        <div className="flex items-center gap-2 text-slate-500 text-sm">
                             <Calendar className="w-4 h-4" />
                             <span>Published January 18, 2024</span>
                         </div>

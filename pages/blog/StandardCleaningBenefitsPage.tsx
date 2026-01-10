@@ -98,7 +98,7 @@ const StandardCleaningBenefitsPage: React.FC = () => {
                             <span className="bg-teal-500 text-white text-sm font-bold px-3 py-1 rounded-full">
                                 Cleaning Tips
                             </span>
-                            <span className="flex items-center gap-1 text-slate-400 text-sm">
+                            <span className="flex items-center gap-1 text-slate-500 text-sm">
                                 <Clock className="w-4 h-4" /> 5 min read
                             </span>
                         </div>
@@ -108,7 +108,7 @@ const StandardCleaningBenefitsPage: React.FC = () => {
                         <p className="text-xl text-slate-300 mb-4">
                             Is recurring house cleaning worth the investment? Here's why Miami homeowners are making the switch to professional cleaning.
                         </p>
-                        <div className="flex items-center gap-2 text-slate-400 text-sm">
+                        <div className="flex items-center gap-2 text-slate-500 text-sm">
                             <Calendar className="w-4 h-4" />
                             <span>Published January 20, 2024</span>
                         </div>

@@ -152,7 +152,7 @@ const PostConstructionCleaningPage: React.FC = () => {
                             <span className="bg-orange-500 text-white text-sm font-bold px-3 py-1 rounded-full">
                                 Specialty Cleaning
                             </span>
-                            <span className="flex items-center gap-1 text-slate-400 text-sm">
+                            <span className="flex items-center gap-1 text-slate-500 text-sm">
                                 <Clock className="w-4 h-4" /> 7 min read
                             </span>
                         </div>
@@ -162,7 +162,7 @@ const PostConstructionCleaningPage: React.FC = () => {
                         <p className="text-xl text-slate-300 mb-4">
                             Just finished a renovation? Here's everything you need to know about getting your space move-in ready.
                         </p>
-                        <div className="flex items-center gap-2 text-slate-400 text-sm">
+                        <div className="flex items-center gap-2 text-slate-500 text-sm">
                             <Calendar className="w-4 h-4" />
                             <span>Published January 12, 2024</span>
                         </div>

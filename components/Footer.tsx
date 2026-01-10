@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
           <h4 className="text-white font-bold uppercase tracking-widest mb-8 text-sm text-center">Locations Served</h4>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '0.75rem 1.5rem' }}>
             {LOCATIONS.map((l) => (
-              <Link key={l.slug} to={`/location/${l.slug}`} className="text-xs text-slate-500 hover:text-teal-400 transition-colors block truncate">
+              <Link key={l.slug} to={`/location/${l.slug}`} className="text-xs text-slate-400 hover:text-teal-400 transition-colors block truncate">
                 {l.name}
               </Link>
             ))}

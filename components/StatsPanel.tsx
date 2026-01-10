@@ -19,7 +19,7 @@ const StatsPanel: React.FC = () => {
               <span className="text-4xl font-light font-serif">50</span>
             </div>
             <p className="text-sm uppercase tracking-widest text-gray-300 font-semibold">Point Checklist</p>
-            <p className="text-xs text-gray-400 mt-1">Standardized Excellence</p>
+            <p className="text-xs text-gray-300 mt-1">Standardized Excellence</p>
           </div>
 
           {/* Stat 2 */}
@@ -31,7 +31,7 @@ const StatsPanel: React.FC = () => {
               <span className="text-4xl font-light font-serif">1000+</span>
             </div>
             <p className="text-sm uppercase tracking-widest text-gray-300 font-semibold">Recurring Clients</p>
-            <p className="text-xs text-gray-400 mt-1">Trusted since San Diego</p>
+            <p className="text-xs text-gray-300 mt-1">Trusted since San Diego</p>
           </div>
 
           {/* Stat 3 */}
@@ -43,7 +43,7 @@ const StatsPanel: React.FC = () => {
               <span className="text-4xl font-light font-serif">5000+</span>
             </div>
             <p className="text-sm uppercase tracking-widest text-gray-300 font-semibold">Projects Done</p>
-            <p className="text-xs text-gray-400 mt-1">Residential & Commercial</p>
+            <p className="text-xs text-gray-300 mt-1">Residential & Commercial</p>
           </div>
 
           {/* Stat 4 - CTA style */}
