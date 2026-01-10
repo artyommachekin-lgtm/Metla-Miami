@@ -34,7 +34,6 @@ const Hero: React.FC = () => {
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 800px, 1200px"
           alt="Pristine Living Room"
           className="w-full h-full object-cover opacity-40"
-          style={{ aspectRatio: '3/2' }}
           loading="eager"
           fetchPriority="high"
           decoding="async"
