@@ -28,8 +28,8 @@ const Hero: React.FC = () => {
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=10&w=480&fm=webp&auto=format&fit=crop"
           srcSet="
             https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=10&w=480&fm=webp&auto=format&fit=crop 480w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=20&w=800&fm=webp&auto=format&fit=crop 800w,
-            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=1200&fm=webp&auto=format&fit=crop 1200w
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=15&w=800&fm=webp&auto=format&fit=crop 800w,
+            https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=20&w=1200&fm=webp&auto=format&fit=crop 1200w
           "
           sizes="(max-width: 640px) 480px, (max-width: 1024px) 800px, 1200px"
           alt="Pristine Living Room"
@@ -38,8 +38,8 @@ const Hero: React.FC = () => {
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          width={1200}
-          height={800}
+          width={800}
+          height={533}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
       </div>
