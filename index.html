@@ -32,22 +32,15 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-  <!-- Resource Hints for Performance - LCP image origin first -->
+  <!-- Resource Hints - Critical LCP origins only (max 4 preconnects) -->
   <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- Preconnect for Jobber Booking Form (speeds up form load) -->
-  <link rel="preconnect" href="https://d3ey4dbjkt2f6s.cloudfront.net" crossorigin />
-  <link rel="preconnect" href="https://clienthub.getjobber.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <!-- DNS-prefetch for below-fold resources -->
   <link rel="dns-prefetch" href="https://d3ey4dbjkt2f6s.cloudfront.net" />
   <link rel="dns-prefetch" href="https://clienthub.getjobber.com" />
-  <!-- Prefetch Jobber assets for instant form loading -->
-  <link rel="prefetch" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/external/work_request_embed.css" as="style" />
-  <link rel="prefetch" href="https://d3ey4dbjkt2f6s.cloudfront.net/assets/static_link/work_request_embed_snippet.js"
-    as="script" />
-  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-  <link rel="dns-prefetch" href="https://images.unsplash.com" />
 
   <!-- Preload Critical Fonts -->
   <link rel="preload"
@@ -57,13 +50,12 @@
     href="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvUDQZNLo_U2r.woff2"
     as="font" type="font/woff2" crossorigin />
 
-  <!-- Preload LCP Hero Image for Mobile Performance -->
-  <link rel="preload"
-    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=10&w=480&fm=webp&auto=format&fit=crop"
-    as="image" type="image/webp" fetchpriority="high" />
-  <link rel="preload"
-    href="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=1200&fm=webp&auto=format&fit=crop"
-    as="image" type="image/webp" media="(min-width: 1024px)" />
+  <!-- Preload LCP Hero Image with responsive srcset -->
+  <link rel="preload" as="image" fetchpriority="high" imagesrcset="
+      https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=10&w=480&fm=webp&auto=format&fit=crop 480w,
+      https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=20&w=800&fm=webp&auto=format&fit=crop 800w,
+      https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=30&w=1200&fm=webp&auto=format&fit=crop 1200w"
+    imagesizes="(max-width: 640px) 480px, (max-width: 1024px) 800px, 1200px" />
 
   <!-- Critical CSS for Above-the-Fold Content -->
   <style>
