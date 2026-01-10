@@ -111,17 +111,17 @@ const Footer: React.FC = () => {
         </nav>
 
         {/* Copyright */}
-        <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-sm text-slate-600">
+        <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-sm text-slate-400">
           <div>&copy; {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.</div>
           <div className="flex gap-4">
-            <Link to="/policies" className="hover:text-teal-400 transition-colors">Privacy Policy</Link>
+            <Link to="/policies" className="text-slate-400 hover:text-teal-400 transition-colors">Privacy Policy</Link>
             <span className="text-slate-700">|</span>
-            <Link to="/policies" className="hover:text-teal-400 transition-colors">Terms of Service</Link>
+            <Link to="/policies" className="text-slate-400 hover:text-teal-400 transition-colors">Terms of Service</Link>
           </div>
         </div>
 
         {/* Legal Disclaimer */}
-        <div className="mt-8 pt-8 border-t border-slate-900/50 text-xs text-slate-600 text-center max-w-4xl mx-auto leading-relaxed">
+        <div className="mt-8 pt-8 border-t border-slate-900/50 text-xs text-slate-400 text-center max-w-4xl mx-auto leading-relaxed">
           <p>
             {COMPANY_NAME} is not the employer of the domestic worker referred to you. The domestic worker may be your employee or an independent contractor depending on the relationship you have with him or her. If you direct and control the manner and means by which the domestic worker performs his or her work you may have employer responsibilities, including employment taxes and workers' compensation.
           </p>
