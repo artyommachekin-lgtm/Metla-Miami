@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
             https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=15&w=800&fm=webp&auto=format&fit=crop 800w,
             https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=20&w=1200&fm=webp&auto=format&fit=crop 1200w
           "
-          sizes="(max-width: 640px) 480px, (max-width: 1024px) 800px, 1200px"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 800px, 1200px"
           alt="Pristine Living Room"
           className="w-full h-full object-cover opacity-40"
           style={{ aspectRatio: '3/2' }}
