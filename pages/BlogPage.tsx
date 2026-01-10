@@ -129,7 +129,7 @@ const BlogPage: React.FC = () => {
                                                 {post.readTime}
                                             </span>
                                         </div>
-                                        <span className="mt-4 text-teal-600 font-medium inline-flex items-center">
+                                        <span className="mt-4 text-teal-700 font-medium inline-flex items-center">
                                             Read article <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                                         </span>
                                     </div>
