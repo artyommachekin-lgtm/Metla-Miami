@@ -37,8 +37,6 @@ const Hero: React.FC = () => {
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          width={800}
-          height={533}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent" />
       </div>
