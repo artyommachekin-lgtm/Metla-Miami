@@ -132,7 +132,7 @@ const Home: React.FC = () => {
               </div>
               <a
                 href={`tel:${PHONE_NUMBER}`}
-                className="inline-flex items-center justify-center w-full bg-teal-600 text-white font-bold py-4 rounded hover:bg-teal-500 transition-colors"
+                className="inline-flex items-center justify-center w-full bg-teal-700 text-white font-bold py-4 rounded hover:bg-teal-600 transition-colors"
               >
                 Give us a call
               </a>
