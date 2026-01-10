@@ -153,7 +153,7 @@ const Home: React.FC = () => {
                 className="block p-4 bg-slate-900 border border-white/10 rounded hover:bg-white/5 transition-colors text-center group"
               >
                 <span className="block font-bold text-lg mb-1 group-hover:text-teal-400 transition-colors">{loc.name}</span>
-                <span className="text-xs text-slate-200 uppercase tracking-wider">{loc.type}</span>
+                <span className="text-xs text-slate-200 uppercase tracking-wider bg-slate-900/80 px-2 py-1 rounded backdrop-blur-sm">{loc.type}</span>
               </Link>
             ))}
           </div>
