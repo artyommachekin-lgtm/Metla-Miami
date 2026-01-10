@@ -21,9 +21,9 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <div className="relative bg-slate-900 text-white pb-24 overflow-hidden" style={{ minHeight: '600px' }}>
+    <div className="relative bg-slate-900 text-white pb-24" style={{ minHeight: '600px' }}>
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=10&w=480&fm=webp&auto=format&fit=crop"
           srcSet="
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
           "
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 800px, 1200px"
           alt="Pristine Living Room"
-          className="w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
           loading="eager"
           fetchPriority="high"
           decoding="async"
