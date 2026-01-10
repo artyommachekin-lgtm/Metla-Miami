@@ -49,7 +49,7 @@ const StatsPanel: React.FC = () => {
           {/* Stat 4 - CTA style */}
           <div
             onClick={() => navigate('/policies#satisfaction-guarantee')}
-            className="p-6 flex flex-col items-center justify-center bg-teal-600/90 hover:bg-teal-600 transition-colors cursor-pointer text-center md:text-left"
+            className="p-6 flex flex-col items-center justify-center bg-teal-700 hover:bg-teal-600 transition-colors cursor-pointer text-center md:text-left"
           >
             <div className="flex items-center space-x-2 mb-1">
               <Award className="w-6 h-6 text-white" />
