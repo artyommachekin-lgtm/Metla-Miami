@@ -95,7 +95,7 @@ const Home: React.FC = () => {
                 </ul>
                 <Link
                   to={`/service/${service.slug}`}
-                  className="inline-flex items-center text-teal-600 font-bold hover:text-teal-700 mt-auto"
+                  className="inline-flex items-center text-teal-700 font-bold hover:text-teal-800 mt-auto"
                 >
                   Learn More & Book <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -153,7 +153,7 @@ const Home: React.FC = () => {
                 className="block p-4 border border-white/10 rounded hover:bg-white/5 transition-colors text-center group"
               >
                 <span className="block font-bold text-lg mb-1 group-hover:text-teal-400 transition-colors">{loc.name}</span>
-                <span className="text-xs text-slate-500 uppercase tracking-wider">{loc.type}</span>
+                <span className="text-xs text-slate-300 uppercase tracking-wider">{loc.type}</span>
               </Link>
             ))}
           </div>
@@ -171,7 +171,7 @@ const Home: React.FC = () => {
                 <span className="inline-block bg-teal-100 text-teal-700 text-xs font-bold px-2 py-1 rounded mb-3">How-To Guide</span>
                 <h3 className="font-bold text-slate-900 group-hover:text-teal-600 transition-colors mb-2">The Ultimate Deep Cleaning Guide</h3>
                 <p className="text-sm text-slate-600 line-clamp-2">Transform your home with our step-by-step professional deep cleaning process.</p>
-                <div className="mt-4 flex items-center text-teal-600 text-sm font-medium">
+                <div className="mt-4 flex items-center text-teal-700 text-sm font-medium">
                   <BookOpen className="w-4 h-4 mr-1" /> 8 min read
                 </div>
               </div>
@@ -181,7 +181,7 @@ const Home: React.FC = () => {
                 <span className="inline-block bg-blue-100 text-blue-700 text-xs font-bold px-2 py-1 rounded mb-3">Checklists</span>
                 <h3 className="font-bold text-slate-900 group-hover:text-teal-600 transition-colors mb-2">Move-Out Cleaning Checklist</h3>
                 <p className="text-sm text-slate-600 line-clamp-2">Get your security deposit back with our complete room-by-room guide.</p>
-                <div className="mt-4 flex items-center text-teal-600 text-sm font-medium">
+                <div className="mt-4 flex items-center text-teal-700 text-sm font-medium">
                   <BookOpen className="w-4 h-4 mr-1" /> 6 min read
                 </div>
               </div>
@@ -191,14 +191,14 @@ const Home: React.FC = () => {
                 <span className="inline-block bg-pink-100 text-pink-700 text-xs font-bold px-2 py-1 rounded mb-3">Vacation Rentals</span>
                 <h3 className="font-bold text-slate-900 group-hover:text-teal-600 transition-colors mb-2">Airbnb Cleaning for Superhosts</h3>
                 <p className="text-sm text-slate-600 line-clamp-2">Turnover tips that keep your 5-star reviews coming.</p>
-                <div className="mt-4 flex items-center text-teal-600 text-sm font-medium">
+                <div className="mt-4 flex items-center text-teal-700 text-sm font-medium">
                   <BookOpen className="w-4 h-4 mr-1" /> 7 min read
                 </div>
               </div>
             </Link>
           </div>
           <div className="text-center mt-10">
-            <Link to="/blog" className="inline-flex items-center text-teal-600 font-bold hover:text-teal-700 transition-colors">
+            <Link to="/blog" className="inline-flex items-center text-teal-700 font-bold hover:text-teal-800 transition-colors">
               View All Articles <ArrowRight className="w-4 h-4 ml-1" />
             </Link>
           </div>
@@ -218,7 +218,7 @@ const Home: React.FC = () => {
                 <p className="text-slate-700 italic mb-6">"{t.text}"</p>
                 <div>
                   <div className="font-bold text-slate-900">{t.name}</div>
-                  <div className="text-sm text-slate-500">{t.location}</div>
+                  <div className="text-sm text-slate-600">{t.location}</div>
                 </div>
               </div>
             ))}

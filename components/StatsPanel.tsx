@@ -56,7 +56,7 @@ const StatsPanel: React.FC = () => {
               <span className="text-2xl font-serif">100%</span>
             </div>
             <p className="text-sm uppercase tracking-widest font-bold">Metla Guarantee</p>
-            <p className="text-xs text-teal-100 mt-1">We reclean for free if unsatisfied.</p>
+            <p className="text-xs text-white/90 mt-1">We reclean for free if unsatisfied.</p>
           </div>
 
         </div>

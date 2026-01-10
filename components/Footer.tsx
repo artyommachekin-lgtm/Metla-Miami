@@ -5,7 +5,7 @@ import { LOCATIONS, SERVICES, COMPANY_NAME, PHONE_NUMBER, COMPANY_EMAIL, COMPANY
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900" role="contentinfo">
+    <footer className="bg-slate-950 text-slate-300 py-16 border-t border-slate-900" role="contentinfo">
       <div className="container mx-auto px-4">
 
         {/* Top Section: Use inline flex styles to guarantee layout */}
