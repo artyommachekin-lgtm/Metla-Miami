@@ -1,13 +1,10 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
 import { PHONE_NUMBER, COMPANY_NAME } from '@/constants';
 import { AlertTriangle, CreditCard, Clock, Ban, CheckCircle } from 'lucide-react';
 
 export default function PoliciesPage() {
-  const searchParams = useSearchParams();
-
   // Handle hash scroll on mount
   useEffect(() => {
     const hash = window.location.hash;
@@ -29,7 +26,7 @@ export default function PoliciesPage() {
         }
       }, 100);
     }
-  }, [searchParams]);
+  }, []);
 
   return (
     <div className="bg-white min-h-screen">
