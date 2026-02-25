@@ -1,9 +1,11 @@
+'use client';
+
 import React from 'react';
 import { CheckCircle2, Users, FolderCheck, Award } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const StatsPanel: React.FC = () => {
-  const navigate = useNavigate();
+  const router = useRouter();
 
   return (
     <div className="relative z-20 -mt-16 mx-4 md:mx-auto max-w-6xl" style={{ minHeight: '120px' }}>
@@ -48,7 +50,7 @@ const StatsPanel: React.FC = () => {
 
           {/* Stat 4 - CTA style */}
           <div
-            onClick={() => navigate('/policies#satisfaction-guarantee')}
+            onClick={() => router.push('/policies#satisfaction-guarantee')}
             className="p-6 flex flex-col items-center justify-center bg-teal-700 hover:bg-teal-600 transition-colors cursor-pointer text-center md:text-left"
           >
             <div className="flex items-center space-x-2 mb-1">

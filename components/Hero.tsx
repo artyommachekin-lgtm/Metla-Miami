@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import { ArrowRight, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Hero: React.FC = () => {
   const handleScroll = (e: React.MouseEvent, id: string) => {
@@ -55,14 +57,14 @@ const Hero: React.FC = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 mb-8 leading-relaxed">
-            Metla House Cleaning brings San Diego's most trusted 50-point cleaning protocol to the Miami Gold Coast.
+            Metla House Cleaning brings San Diego&apos;s most trusted 50-point cleaning protocol to the Miami Gold Coast.
             Fully vetted, insured, and detail-obsessed.
           </p>
 
           {/* CTA buttons - use inline style for reliable CLS fix (Tailwind CDN doesn't support arbitrary values) */}
           <div className="flex flex-col sm:flex-row gap-4" style={{ minHeight: 'var(--cta-min-height, 112px)' }}>
             <Link
-              to="/booking"
+              href="/booking"
               className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-slate-900 bg-teal-400 hover:bg-teal-300 transition-all rounded-sm shadow-[0_0_20px_rgba(45,212,191,0.3)] cursor-pointer"
             >
               Book Now

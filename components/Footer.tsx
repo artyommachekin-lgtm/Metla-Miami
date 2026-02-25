@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import { LOCATIONS, SERVICES, COMPANY_NAME, PHONE_NUMBER, COMPANY_EMAIL, COMPANY_ADDRESS, BUSINESS_HOURS } from '../constants';
+import { LOCATIONS, SERVICES, COMPANY_NAME, PHONE_NUMBER, COMPANY_EMAIL, COMPANY_ADDRESS, BUSINESS_HOURS } from '@/constants';
 
 const Footer: React.FC = () => {
   return (
@@ -47,11 +47,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {SERVICES.map((s) => (
                 <li key={s.id}>
-                  <Link to={`/service/${s.slug}`} className="hover:text-teal-400 transition-colors text-sm">{s.title}</Link>
+                  <Link href={`/service/${s.slug}`} className="hover:text-teal-400 transition-colors text-sm">{s.title}</Link>
                 </li>
               ))}
               <li>
-                <Link to="/same-day-cleaning" className="hover:text-teal-400 transition-colors text-sm">Same Day Cleaning</Link>
+                <Link href="/same-day-cleaning" className="hover:text-teal-400 transition-colors text-sm">Same Day Cleaning</Link>
               </li>
             </ul>
           </nav>
@@ -60,12 +60,12 @@ const Footer: React.FC = () => {
           <nav style={{ flex: '1 1 180px', minWidth: '180px' }} aria-label="Quick Links">
             <h4 className="text-white font-bold uppercase tracking-widest mb-6 text-sm">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link to="/" className="hover:text-teal-400 transition-colors text-sm">Home</Link></li>
-              <li><Link to="/about" className="hover:text-teal-400 transition-colors text-sm">About Us</Link></li>
-              <li><Link to="/house-cleaning" className="hover:text-teal-400 transition-colors text-sm">House Cleaning Miami</Link></li>
-              <li><Link to="/blog" className="hover:text-teal-400 transition-colors text-sm">Cleaning Tips & Blog</Link></li>
-              <li><Link to="/booking" className="hover:text-teal-400 transition-colors text-sm font-medium text-teal-400">Book Now →</Link></li>
-              <li><Link to="/policies" className="hover:text-teal-400 transition-colors text-sm">Policies & Terms</Link></li>
+              <li><Link href="/" className="hover:text-teal-400 transition-colors text-sm">Home</Link></li>
+              <li><Link href="/about" className="hover:text-teal-400 transition-colors text-sm">About Us</Link></li>
+              <li><Link href="/house-cleaning" className="hover:text-teal-400 transition-colors text-sm">House Cleaning Miami</Link></li>
+              <li><Link href="/blog" className="hover:text-teal-400 transition-colors text-sm">Cleaning Tips & Blog</Link></li>
+              <li><Link href="/booking" className="hover:text-teal-400 transition-colors text-sm font-medium text-teal-400">Book Now →</Link></li>
+              <li><Link href="/policies" className="hover:text-teal-400 transition-colors text-sm">Policies & Terms</Link></li>
             </ul>
           </nav>
 
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                 <div className="w-1.5 h-1.5 bg-teal-500 rounded-full flex-shrink-0 mt-1.5" />
                 <span>
                   <strong className="text-slate-200 block">100% Satisfaction Promise</strong>
-                  We reclean for free if you aren't happy.
+                  We reclean for free if you aren&apos;t happy.
                 </span>
               </li>
               <li className="flex items-start gap-3 text-sm group">
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
           <h4 className="text-white font-bold uppercase tracking-widest mb-8 text-sm text-center">Locations Served</h4>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '0.75rem 1.5rem' }}>
             {LOCATIONS.map((l) => (
-              <Link key={l.slug} to={`/location/${l.slug}`} className="text-xs text-slate-300 hover:text-teal-400 transition-colors block truncate">
+              <Link key={l.slug} href={`/location/${l.slug}`} className="text-xs text-slate-300 hover:text-teal-400 transition-colors block truncate">
                 {l.name}
               </Link>
             ))}
@@ -114,16 +114,16 @@ const Footer: React.FC = () => {
         <div className="border-t border-slate-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-sm text-slate-400">
           <div>&copy; {new Date().getFullYear()} {COMPANY_NAME}. All rights reserved.</div>
           <div className="flex gap-4">
-            <Link to="/policies" className="text-slate-400 hover:text-teal-400 transition-colors">Privacy Policy</Link>
+            <Link href="/policies" className="text-slate-400 hover:text-teal-400 transition-colors">Privacy Policy</Link>
             <span className="text-slate-700">|</span>
-            <Link to="/policies" className="text-slate-400 hover:text-teal-400 transition-colors">Terms of Service</Link>
+            <Link href="/policies" className="text-slate-400 hover:text-teal-400 transition-colors">Terms of Service</Link>
           </div>
         </div>
 
         {/* Legal Disclaimer */}
         <div className="mt-8 pt-8 border-t border-slate-900/50 text-xs text-slate-400 text-center max-w-4xl mx-auto leading-relaxed">
           <p>
-            {COMPANY_NAME} is not the employer of the domestic worker referred to you. The domestic worker may be your employee or an independent contractor depending on the relationship you have with him or her. If you direct and control the manner and means by which the domestic worker performs his or her work you may have employer responsibilities, including employment taxes and workers' compensation.
+            {COMPANY_NAME} is not the employer of the domestic worker referred to you. The domestic worker may be your employee or an independent contractor depending on the relationship you have with him or her. If you direct and control the manner and means by which the domestic worker performs his or her work you may have employer responsibilities, including employment taxes and workers&apos; compensation.
           </p>
         </div>
       </div>

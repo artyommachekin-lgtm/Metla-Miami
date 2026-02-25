@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font fallback with size-adjust to reduce CLS from font swap */
+@font-face {
+  font-family: 'Playfair Display Fallback';
+  src: local('Georgia');
+  size-adjust: 112%;
+  ascent-override: 97%;
+  descent-override: 27%;
+}
+
+/* CLS prevention - CTA button min-height */
+:root {
+  --cta-min-height: 112px;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --cta-min-height: 0;
+  }
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset for fixed navigation on anchor scroll */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Mobile optimizations */
+img {
+  max-width: 100%;
+  height: auto;
+  background-color: #f1f5f9;
+}
+
+img[width][height] {
+  height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
+
+button,
+a,
+[role="button"],
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 2px solid #14b8a6;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Jobber embed container */
+.jobber-embed-container {
+  min-height: 600px;
+  contain: layout style;
+}
+
+.jobber-embed-container iframe {
+  width: 100%;
+  min-height: 500px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  button,
+  a.inline-flex,
+  [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* LCP Optimization */
+.hero-image-container {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.transition-all,
+.transition-colors,
+.transition-transform {
+  will-change: auto;
+}
+
+@media (hover: hover) {
+  .transition-all:hover,
+  .transition-colors:hover,
+  .transition-transform:hover {
+    will-change: transform, opacity;
+  }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+.loading-skeleton {
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

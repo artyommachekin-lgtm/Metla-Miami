@@ -1,5 +1,8 @@
+'use client';
+
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ChevronRight, Home } from 'lucide-react';
 
 interface BreadcrumbItem {
@@ -8,8 +11,8 @@ interface BreadcrumbItem {
 }
 
 const Breadcrumbs: React.FC = () => {
-    const location = useLocation();
-    const pathnames = location.pathname.split('/').filter(x => x);
+    const pathname = usePathname();
+    const pathnames = pathname.split('/').filter(x => x);
 
     // Build breadcrumb items based on path
     const breadcrumbItems: BreadcrumbItem[] = [{ label: 'Home', href: '/' }];
@@ -41,6 +44,8 @@ const Breadcrumbs: React.FC = () => {
             breadcrumbItems.push({ label: 'Policies' });
         } else if (type === 'house-cleaning') {
             breadcrumbItems.push({ label: 'House Cleaning' });
+        } else if (type === 'same-day-cleaning') {
+            breadcrumbItems.push({ label: 'Same Day Cleaning' });
         } else if (type === 'blog') {
             breadcrumbItems.push({ label: 'Blog', href: slug ? '/blog' : undefined });
             if (slug) {
@@ -51,6 +56,10 @@ const Breadcrumbs: React.FC = () => {
                     .join(' ');
                 breadcrumbItems.push({ label: title });
             }
+        } else if (type === 'faq') {
+            breadcrumbItems.push({ label: 'FAQ' });
+        } else if (type === 'locations') {
+            breadcrumbItems.push({ label: 'Locations' });
         }
     }
 
@@ -80,7 +89,7 @@ const Breadcrumbs: React.FC = () => {
                             )}
                             {item.href ? (
                                 <Link
-                                    to={item.href}
+                                    href={item.href}
                                     className="text-teal-600 hover:text-teal-700 flex items-center"
                                     itemProp="item"
                                 >

@@ -1,6 +1,6 @@
 import React from 'react';
-import { COMPANY_NAME, PHONE_NUMBER_INTL, COMPANY_EMAIL, COMPANY_ADDRESS, BUSINESS_HOURS } from '../constants';
-import { Location } from '../types';
+import { COMPANY_NAME, PHONE_NUMBER_INTL, COMPANY_EMAIL, COMPANY_ADDRESS, BUSINESS_HOURS } from '@/constants';
+import { Location } from '@/types';
 
 interface LocalBusinessSchemaProps {
     location: Location;

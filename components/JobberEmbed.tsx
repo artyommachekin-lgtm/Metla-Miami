@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState, useRef } from 'react';
 
 // Global flag to track if Jobber assets have been preloaded
@@ -5,7 +7,7 @@ let jobberAssetsPreloaded = false;
 
 // Preload Jobber assets globally (called on app init or hover)
 export const preloadJobberAssets = () => {
-  if (jobberAssetsPreloaded) return;
+  if (jobberAssetsPreloaded || typeof document === 'undefined') return;
   jobberAssetsPreloaded = true;
 
   const cssId = 'jobber-css';
@@ -41,6 +43,7 @@ const JobberEmbed: React.FC = () => {
   useEffect(() => {
     const cssId = 'jobber-css';
     const scriptId = 'jobber-script';
+    const formContainerId = 'd33a529a-72ba-403d-bd83-811fe4abb0e2-641111';
 
     // Inject CSS immediately if not already present
     if (!document.getElementById(cssId)) {
@@ -74,21 +77,42 @@ const JobberEmbed: React.FC = () => {
     // Use sync loading for faster execution
     script.async = false;
 
-    // Poll for form appearance (faster than waiting for onload)
-    const pollForForm = () => {
-      const formContainer = document.getElementById('d33a529a-72ba-403d-bd83-811fe4abb0e2-641111');
-      if (formContainer && formContainer.children.length > 0) {
+    // Use MutationObserver instead of requestAnimationFrame polling
+    script.onload = () => {
+      const formContainer = document.getElementById(formContainerId);
+      if (!formContainer) {
+        setIsLoading(false);
+        return;
+      }
+
+      // If form already has children, it's ready
+      if (formContainer.children.length > 0) {
         setIsLoading(false);
         setIsFormReady(true);
         scriptLoadedRef.current = true;
-      } else {
-        requestAnimationFrame(pollForForm);
+        return;
       }
-    };
 
-    script.onload = () => {
-      // Start polling for form appearance
-      requestAnimationFrame(pollForForm);
+      // Observe for child additions
+      const observer = new MutationObserver((mutations) => {
+        for (const mutation of mutations) {
+          if (mutation.addedNodes.length > 0) {
+            setIsLoading(false);
+            setIsFormReady(true);
+            scriptLoadedRef.current = true;
+            observer.disconnect();
+            return;
+          }
+        }
+      });
+
+      observer.observe(formContainer, { childList: true });
+
+      // Timeout fallback after 15s
+      setTimeout(() => {
+        observer.disconnect();
+        setIsLoading(false);
+      }, 15000);
     };
 
     script.onerror = () => {
@@ -96,11 +120,6 @@ const JobberEmbed: React.FC = () => {
     };
 
     document.body.appendChild(script);
-
-    // Cleanup on unmount
-    return () => {
-      // Don't remove the script on unmount - keep it cached
-    };
   }, []);
 
   return (

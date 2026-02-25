@@ -1,14 +1,17 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { PHONE_NUMBER } from '../constants';
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
+import { PHONE_NUMBER } from '@/constants';
 import { preloadJobberAssets } from './JobberEmbed';
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -18,11 +21,11 @@ const Navigation: React.FC = () => {
 
   useEffect(() => {
     setIsMobileMenuOpen(false);
-  }, [location]);
+  }, [pathname]);
 
   const handleNavClick = (e: React.MouseEvent, targetId: string) => {
     e.preventDefault();
-    if (location.pathname === '/') {
+    if (pathname === '/') {
       const element = document.getElementById(targetId);
       if (element) {
         const offset = 80;
@@ -30,13 +33,13 @@ const Navigation: React.FC = () => {
         window.scrollTo({ top: elementTop - offset, behavior: 'smooth' });
       }
     } else {
-      navigate('/', { state: { targetId } });
+      router.push(`/#${targetId}`);
     }
     setIsMobileMenuOpen(false);
   };
 
   // Check if we're on the homepage (hero has dark background)
-  const isHomePage = location.pathname === '/';
+  const isHomePage = pathname === '/';
 
   // Determine nav styling based on page and scroll state
   const getNavClasses = () => {
@@ -61,13 +64,13 @@ const Navigation: React.FC = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${getNavClasses()}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-serif font-bold tracking-tighter">
+        <Link href="/" className="text-2xl font-serif font-bold tracking-tighter">
           METLA<span className="text-teal-500">.</span>
         </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="hover:text-teal-500 transition-colors text-sm font-medium uppercase tracking-wider">Home</Link>
+          <Link href="/" className="hover:text-teal-500 transition-colors text-sm font-medium uppercase tracking-wider">Home</Link>
           <a
             href="#services"
             onClick={(e) => handleNavClick(e, 'services')}
@@ -83,13 +86,13 @@ const Navigation: React.FC = () => {
             Locations
           </a>
           <Link
-            to="/about"
+            href="/about"
             className="hover:text-teal-500 transition-colors text-sm font-medium uppercase tracking-wider"
           >
             About
           </Link>
           <Link
-            to="/blog"
+            href="/blog"
             className="hover:text-teal-500 transition-colors text-sm font-medium uppercase tracking-wider"
           >
             Blog
@@ -101,7 +104,7 @@ const Navigation: React.FC = () => {
               {PHONE_NUMBER}
             </a>
             <Link
-              to="/booking"
+              href="/booking"
               onMouseEnter={preloadJobberAssets}
               onTouchStart={preloadJobberAssets}
               className={`px-5 py-2 rounded-sm font-bold text-sm transition-all shadow-lg ${getButtonClasses()}`}
@@ -125,7 +128,7 @@ const Navigation: React.FC = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white text-slate-900 shadow-xl p-6 flex flex-col gap-6 md:hidden">
-          <Link to="/" className="text-lg font-medium">Home</Link>
+          <Link href="/" className="text-lg font-medium">Home</Link>
           <a
             href="#services"
             onClick={(e) => handleNavClick(e, 'services')}
@@ -140,15 +143,15 @@ const Navigation: React.FC = () => {
           >
             Locations
           </a>
-          <Link to="/about" className="text-lg font-medium">
+          <Link href="/about" className="text-lg font-medium">
             About
           </Link>
-          <Link to="/blog" className="text-lg font-medium">
+          <Link href="/blog" className="text-lg font-medium">
             Blog
           </Link>
           <a href={`tel:${PHONE_NUMBER}`} className="text-lg font-medium text-teal-600">{PHONE_NUMBER}</a>
           <Link
-            to="/booking"
+            href="/booking"
             className="bg-slate-900 text-white text-center py-3 rounded-sm font-bold"
           >
             Book Now
