@@ -1,8 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import JobberEmbed from '@/components/JobberEmbed';
+import MetlaIntakeForm from '@/components/MetlaIntakeForm';
 import { Star } from 'lucide-react';
+
+// #27 FLIP FLAG (Run 3 P6) — FLIPPED, LIVE since LEAD-ALERT (2026-09-17): the CleanOps intake form is the booking
+// form (this site tagged as "miami"). The Jobber embed is retired and no longer imported, so `false` renders no form.
+const USE_CLEANOPS_INTAKE = true;
 
 export default function BookingContent() {
   return (
@@ -33,7 +37,7 @@ export default function BookingContent() {
 
       <div className="container mx-auto px-4 py-12 -mt-20 relative z-20">
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden border border-slate-100">
-          <JobberEmbed />
+          {USE_CLEANOPS_INTAKE && <MetlaIntakeForm site="miami" />}
         </div>
 
         <div className="max-w-2xl mx-auto mt-16 text-center">
@@ -77,7 +81,7 @@ export default function BookingContent() {
             <div className="space-y-4">
               <div>
                 <h3 className="font-bold text-teal-400">How quickly will I receive my quote?</h3>
-                <p className="text-slate-300 mt-1">Most quotes are delivered within 2-4 hours during business hours. For urgent requests, call us directly at (786) 723-7533.</p>
+                <p className="text-slate-300 mt-1">Most quotes are delivered within minutes during business hours. For urgent requests, call us directly at (786) 723-7533.</p>
               </div>
               <div>
                 <h3 className="font-bold text-teal-400">What information do I need to provide?</h3>

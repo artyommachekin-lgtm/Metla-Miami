@@ -88,7 +88,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://d3ey4dbjkt2f6s.cloudfront.net" />
-        <link rel="dns-prefetch" href="https://clienthub.getjobber.com" />
         <link rel="dns-prefetch" href="https://maps.google.com" />
         <script
           type="application/ld+json"
