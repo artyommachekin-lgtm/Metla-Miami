@@ -200,7 +200,7 @@ export default function MetlaIntakeForm({ site }: { site: 'sd' | 'miami' }) {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             inputMode="tel"
-            placeholder="(619) 555-0142"
+            placeholder="(305) 555-0142"
             autoComplete="tel"
             aria-invalid={phoneTone === 'bad'}
           />
