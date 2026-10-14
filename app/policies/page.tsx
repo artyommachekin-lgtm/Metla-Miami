@@ -67,21 +67,12 @@ export default function PoliciesPage() {
                   We offer an upfront price estimate before we even enter your home, based on what you tell us about the size of your home and the cleaning service selected. We reserve the right to change the quoted pricing, including any applicable discounts, if the actual size or circumstances of your home are not as described, or if the booking options selected are inappropriate.
                 </p>
               </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
-                  <h4 className="font-bold text-slate-900 mb-2">Pet Fee</h4>
-                  <p className="text-sm">
-                    If you have pets in your home, we charge an additional $40 to factor in time and energy to clean the pet fur. This fee does not include the cleanup of the pet&apos;s bodily fluids (urine, vomit, blood or feces).
-                  </p>
-                </div>
-                <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
+              <div className="bg-slate-50 p-4 rounded-lg border border-slate-100">
                   <h4 className="font-bold text-slate-900 mb-2">Add-on Service Policy</h4>
                   <p className="text-sm">
                     We charge a fee for specific add-on items such as interior fridge cleaning, interior oven clean, and interior window cleaning.
                   </p>
                 </div>
-              </div>
 
               <div className="mt-6 bg-red-50 p-4 rounded-lg border border-red-100 flex gap-4">
                 <AlertTriangle className="w-6 h-6 text-red-500 flex-shrink-0" />
@@ -146,6 +137,13 @@ export default function PoliciesPage() {
               </div>
 
               <div className="mb-6">
+                <h3 className="font-bold text-lg text-teal-700 mb-2">Outstanding Balances</h3>
+                <p>
+                  Payment is due the day of your clean. If a balance remains unpaid, {COMPANY_NAME} reserves the right to collect it using any payment method you have provided to us — including charging the card on file for the full amount owed, with the card processing fee — and to decline further bookings until the balance is settled.
+                </p>
+              </div>
+
+              <div className="mb-6">
                 <h3 className="font-bold text-lg text-teal-700 mb-2">Discounts & Rate Increases</h3>
                 <p className="mb-2">
                   We offer discounts of 10-30% for recurring cleanings. If you reschedule so that it falls outside your selected frequency, we reserve the right to eliminate the discount for that cleaning.
@@ -165,7 +163,7 @@ export default function PoliciesPage() {
                   <CheckCircle className="w-5 h-5" /> 24 Hour Satisfaction Guarantee
                 </h3>
                 <p className="text-teal-900 mb-4">
-                  We want you to be completely satisfied. If you&apos;re not happy with the cleaning, please contact us <strong>within 24 hours</strong> and we&apos;ll send someone to fix the missed areas for free.
+                  We want you to be completely satisfied. If you&apos;re not happy with the cleaning, please contact us <strong>within 24 hours</strong> and we&apos;ll send someone to fix the missed areas for free. This guarantee applies when you do a walkthrough with the technician at the end of the clean (see Post-Cleaning Walkthrough below).
                 </p>
                 <p className="text-sm text-teal-800 font-bold">
                   Note: We do not offer discounts or refunds for discrepancies.
