@@ -137,6 +137,13 @@ export default function PoliciesPage() {
               </div>
 
               <div className="mb-6">
+                <h3 className="font-bold text-lg text-teal-700 mb-2">Zelle Payments</h3>
+                <p>
+                  If you pay by Zelle, payment is due 24 hours before your clean.
+                </p>
+              </div>
+
+              <div className="mb-6">
                 <h3 className="font-bold text-lg text-teal-700 mb-2">Outstanding Balances</h3>
                 <p>
                   Payment is due the day of your clean. If a balance remains unpaid, {COMPANY_NAME} reserves the right to collect it using any payment method you have provided to us — including charging the card on file for the full amount owed, with the card processing fee — and to decline further bookings until the balance is settled.
