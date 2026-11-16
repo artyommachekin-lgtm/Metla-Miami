@@ -57,7 +57,7 @@ export const SITE_CONFIG = {
         originDescription: "Founded by frustrated property managers who demanded perfection",
         expansionNarrative: "3+ years of trusted cleaning excellence serving Miami's diverse neighborhoods.",
     },
-    baseUrl: "https://www.metlahousecleaningmiami.com",
+    baseUrl: "https://metlahousecleaningmiami.com",
     bookingLink: "/booking",
     analytics: { googleId: "", gtmId: "", facebookPixelId: "" },
     socialProfiles: {
