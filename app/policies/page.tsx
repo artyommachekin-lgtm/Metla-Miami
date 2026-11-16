@@ -139,7 +139,7 @@ export default function PoliciesPage() {
               <div className="mb-6">
                 <h3 className="font-bold text-lg text-teal-700 mb-2">Zelle Payments</h3>
                 <p>
-                  If you pay by Zelle, payment is due 24 hours before your clean.
+                  If you pay by Zelle, payment is due upon booking.
                 </p>
               </div>
 
@@ -163,14 +163,14 @@ export default function PoliciesPage() {
 
             {/* Guarantee & Satisfaction */}
             <section id="satisfaction-guarantee">
-              <h2 className="text-2xl font-serif font-bold text-slate-900 border-b border-slate-200 pb-2 mb-6">Satisfaction Guarantee</h2>
+              <h2 className="text-2xl font-serif font-bold text-slate-900 border-b border-slate-200 pb-2 mb-6">Satisfaction Commitment</h2>
 
               <div className="mb-6 bg-teal-50 border border-teal-100 p-6 rounded-lg">
                 <h3 className="font-bold text-lg text-teal-800 mb-2 flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5" /> 24 Hour Satisfaction Guarantee
+                  <CheckCircle className="w-5 h-5" /> 24 Hour Satisfaction Commitment
                 </h3>
                 <p className="text-teal-900 mb-4">
-                  We want you to be completely satisfied. If you&apos;re not happy with the cleaning, please contact us <strong>within 24 hours</strong> and we&apos;ll send someone to fix the missed areas for free. This guarantee applies when you do a walkthrough with the technician at the end of the clean (see Post-Cleaning Walkthrough below).
+                  We want you to be completely satisfied. If you&apos;re not happy with the cleaning, please contact us <strong>within 24 hours</strong> and we&apos;ll send someone to fix the missed areas for free. This commitment applies when you do a walkthrough with the technician at the end of the clean (see Post-Cleaning Walkthrough below).
                 </p>
                 <p className="text-sm text-teal-800 font-bold">
                   Note: We do not offer discounts or refunds for discrepancies.
@@ -180,7 +180,7 @@ export default function PoliciesPage() {
               <div className="mb-6">
                 <h3 className="font-bold text-lg text-slate-900 mb-2">Post-Cleaning Walkthrough</h3>
                 <p className="mb-2">
-                  We cannot guarantee our work if you are not present to do a walkthrough at the conclusion of the cleaning. Failure to do a walkthrough while the technician is onsite voids our 24-hour guarantee.
+                  We cannot guarantee our work if you are not present to do a walkthrough at the conclusion of the cleaning. Failure to do a walkthrough while the technician is onsite voids our 24-hour commitment.
                 </p>
                 <p className="text-sm italic text-slate-500">
                   Exceptions can be made if requested before the cleaner begins (within 24 hours). If you leave during the clean, we can call with 20-minutes notice. Technicians will wait a maximum of 5 minutes.
@@ -219,8 +219,11 @@ export default function PoliciesPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-teal-700 mb-2">Privacy & Photos</h3>
+                  <p className="text-sm mb-2">
+                    Our technicians take before and after pictures as a quality assurance report and proof of work completed. By booking with {COMPANY_NAME}, you acknowledge that we reserve the right to use these photographs as promotional material, including on our website, social media, and marketing channels.
+                  </p>
                   <p className="text-sm">
-                    Our technicians take before and after pictures to protect the integrity of the job. These are not shared externally. We respect your privacy regarding all personal information.
+                    Photos will never include personally identifiable information, sensitive areas, or private belongings, and we respect your privacy at all times. If you prefer that photos from your home not be used for promotional purposes, please notify us before the scheduled service.
                   </p>
                 </div>
               </div>

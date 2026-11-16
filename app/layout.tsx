@@ -55,6 +55,9 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
+  verification: {
+    google: 'MWJyQ44x9PC1LFmlQa5gncfLt6O4uZMhoJ9ihkFwGQc',
+  },
   other: {
     'geo.region': 'US-FL',
     'geo.placename': 'Miami',
