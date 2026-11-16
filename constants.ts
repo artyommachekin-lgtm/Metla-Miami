@@ -317,7 +317,6 @@ We're not here for just one cleaning. We're building lasting relationships with 
         "Walls spot cleaned",
         "Baseboards dusted",
         "Doors, door frames and door handles cleaned/disinfected",
-        "Couch vacuumed",
         "Blinds dusted",
         "Ceiling fans dusted",
         "Window sills dusted"
