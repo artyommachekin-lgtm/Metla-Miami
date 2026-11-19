@@ -26,6 +26,7 @@
 
 import React, { useState } from 'react';
 import { PHONE_NUMBER, COMPANY_EMAIL } from '@/constants';
+import { readLeadSource } from '@/components/LeadSource';
 
 const ENDPOINT = process.env.NEXT_PUBLIC_CLEANOPS_INTAKE_URL ?? '';
 
@@ -112,6 +113,9 @@ export default function MetlaIntakeForm({ site }: { site: 'sd' | 'miami' }) {
           notes,
           company, // honeypot
           site,
+          // Where the visit came from (order seo/03): page address, first-page referrer and utm tags.
+          // Never anything the visitor typed. See components/LeadSource.tsx.
+          ...readLeadSource(),
         }),
       });
       if (res.status >= 200 && res.status < 300) {
